@@ -11,7 +11,7 @@
    "Speed 203 en Accuracy 137: Speed haalt het doel, Accuracy volstaat voor Clan Boss Normal (100), niet voor Hard (150).",
    "Crit Rate blijft op 44%. Dat lost alleen Crit Rate-gloves op, en die staan nog altijd niet op het account.",
    "Dorothy draagt nu Kaels oude gear, met 4★ Speed-boots (SPD 16). Dat is genoeg om te levelen.",
-   "Ringen, amuletten en banners zijn factiegebonden. Kael kan alleen Dark Elves-accessoires dragen, en er is geen betere Dark Elves-ring dan de zijne. Upgrade zijn huidige ring verder als je silver over hebt."
+   "Accessoires zijn factiegebonden, en een ring kan pas vanaf Rank 4. Kael heeft geen betere Dark Elves-ring. De Sacred Order-ring is pas bruikbaar als Warpriest Rank 4 is, en dat is food niet waard zolang Dorothy niet L50 is."
   ],
   "kael": {
    "current": {
@@ -85,7 +85,7 @@
     "t": "Gear"
    }
   ],
-  "synced": "13 okt 2026, 15:40",
+  "synced": "13 okt 2026, 16:05",
   "account": {
    "clan": "C1C-NOVUS",
    "createdOn": "2026-10-01",
@@ -118,35 +118,29 @@
    "id": "t05",
    "order": 1,
    "done": false,
-   "text": "Level Dorothy naar L50 in je campagne-farmteam (nu L19)."
-  },
-  {
-   "id": "t09",
-   "order": 2,
-   "done": false,
-   "text": "Kael: ontgrendel Warmaster (T6-mastery). Dat kan nu hij Rank 6 is. Farm de scrolls in de Minotaur."
+   "text": "Level Dorothy naar L50 in de campagne. Team: Kael + Dorothy + 2 food (een campagneteam telt 4 plekken). Nu L19."
   },
   {
    "id": "t10",
-   "order": 3,
+   "order": 2,
    "done": false,
    "text": "Clan Boss: speel elke dag je 4 keys op Normal. Kaels 137 Accuracy haalt het doel van 100."
   },
   {
    "id": "t11",
-   "order": 4,
+   "order": 3,
    "done": false,
    "text": "Farm Magic- en Arcane-potions in de Keeps voor Kaels ascension."
   },
   {
    "id": "t03",
-   "order": 5,
+   "order": 4,
    "done": false,
    "text": "Zoek Crit Rate-gloves en zet de eerste goede op Kael."
   },
   {
    "id": "t08",
-   "order": 6,
+   "order": 5,
    "done": false,
    "text": "Speel de Hard-campagne verder (nu 103 sterren) en start daarna Brutal."
   }
@@ -160,7 +154,7 @@
    "level": 60,
    "name": "Kael",
    "next": "Rank 6 bereikt. Nu: Crit Rate-gloves, Warmaster, ascension.",
-   "note": "Farmer, poison. Rank 6 sinds 13 okt. Boeken vol, 14 masteries.",
+   "note": "Farmer, poison. Rank 6 sinds 13 okt. Boeken vol, 15/15 masteries (Warmaster erbij).",
    "prio": 1,
    "rarity": 3,
    "role": "kern",
@@ -187,7 +181,7 @@
      "CDMG": 50
     },
     "ascension": 0,
-    "masteries": 14,
+    "masteries": 15,
     "books": {
      "used": 14,
      "max": 14,
@@ -307,7 +301,7 @@
       "ay-kael"
      ]
     },
-    "next": "Crit Rate-gloves zoeken (nu 44%). Warmaster (T6) ontgrendelen, want dat kan op Rank 6. Ascension-potions farmen in de Magic en Arcane Keep.",
+    "next": "Crit Rate-gloves (nu 44%) en ascension-potions uit de Magic en Arcane Keep. Masteries zijn compleet.",
     "nextSrc": [
      "hh-chicken"
     ]
@@ -2541,10 +2535,16 @@
    {
     "term": "Accessoires (ring, amulet, banner)",
     "kind": "mechaniek",
-    "nl": "Elk accessoire hoort bij één factie. Alleen champions van die factie kunnen het dragen: een Dark Elves-ring past op Kael, een High Elves-ring niet. Bron: de factie staat in de accountdata bij elk accessoire.",
+    "nl": "Elk accessoire hoort bij één factie: alleen champions van die factie kunnen het dragen (een Dark Elves-ring past op Kael, een High Elves-ring niet). Een ring kan pas vanaf Rank 4.",
     "src": [
      "hh-opt"
     ]
+   },
+   {
+    "term": "Campagneteam",
+    "kind": "mechaniek",
+    "nl": "Een campagneteam telt 4 plekken. Farmen doe je met je farmer, de champion die je wilt levelen, en 2 food-champions.",
+    "src": []
    }
   ],
   "affinity": {
@@ -2632,6 +2632,43 @@
   ]
  },
  "syncs": [
+  {
+   "id": "2026-10-13-1605",
+   "date": "13 okt 2026, 16:05",
+   "title": "Kaels masteries compleet",
+   "highlights": [
+    "Kael heeft Warmaster: 15 van de 15 masteries.",
+    "Opdracht 3 heeft nu nog 5 taken."
+   ],
+   "changes": [
+    "Kael: 14 naar 15 masteries (Warmaster, T6).",
+    "Diabolist: gear gewijzigd.",
+    "Geen nieuwe champions, Dorothy nog L19, Hard nog 103 sterren."
+   ],
+   "notes": [
+    "Correctie: een campagneteam telt 4 plekken, dus Kael + Dorothy + 2 food. Ik schreef eerder 3 food.",
+    "Correctie: een ring kan pas vanaf Rank 4. De Sacred Order-ring voor Warpriest wacht dus.",
+    "De taak 'Warmaster ontgrendelen' was overbodig: je had hem al. Ik had de mastery-id's niet gecontroleerd."
+   ],
+   "next": [
+    "Clan Boss Normal: je 4 keys.",
+    "Campagne farmen met Kael + Dorothy + 2 food tot Dorothy L50 is.",
+    "Arcane en Magic Keep voor Kaels ascension."
+   ],
+   "kael": {
+    "grade": 6,
+    "level": 60,
+    "HP": 22921,
+    "ATK": 2354,
+    "DEF": 1804,
+    "SPD": 203,
+    "CRATE": 44,
+    "CDMG": 85,
+    "RES": 57,
+    "ACC": 137
+   },
+   "campaignHard": 103
+  },
   {
    "id": "2026-10-13-1540",
    "date": "13 okt 2026, 15:40",

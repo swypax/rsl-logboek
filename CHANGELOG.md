@@ -5,3 +5,4 @@
 - 2026-10-13 15:40: sync. Kael Rank 6 L60 (SPD 203, ACC 137, CR 44%). Opdracht 3 gestart: Dorothy naar L50, Kael afwerken.
 - 2026-10-13: Syncs-sectie toegevoegd: laatste sync op Overzicht, volledige geschiedenis en Kaels evolutie op #/syncs.
 - 2026-10-13: correctie. De 5★-ring is High Elves en past niet op Kael (accessoires zijn factiegebonden). Taak geschrapt.
+- 2026-10-13 16:05: sync. Kael 15/15 masteries. Correcties: campagneteam = 4 plekken, ring pas vanaf Rank 4.
