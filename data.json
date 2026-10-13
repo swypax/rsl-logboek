@@ -3,29 +3,29 @@
   "arena": 4,
   "campaign": {
    "brutal": 0,
-   "hard": 88,
+   "hard": 103,
    "nightmare": 0,
    "normal": 252
   },
   "gearFixes": [
-   "Optimizer-build staat op Kael: SPD 183, ACC 137, C.RATE 44%. 4 stukken Perception (Set #38).",
-   "Nog steeds geen Crit Rate-gloves op het account: Crit Rate blijft op 44%, doel 85%.",
-   "Crit Damage zakte naar 78%. Voor poison maakt dat weinig uit, voor directe schade wel.",
-   "Dorothy draagt nu minder goede gear. Geef haar die stukken terug zodra ze L50 is."
+   "Speed 203 en Accuracy 137: Speed haalt het doel, Accuracy volstaat voor Clan Boss Normal (100), niet voor Hard (150).",
+   "Crit Rate blijft op 44%. Dat lost alleen Crit Rate-gloves op, en die staan nog altijd niet op het account.",
+   "Ring is 3★ +8. Een betere ring (bv. de ongebruikte 5★ HP-ring) is een goedkope verbetering.",
+   "Dorothy draagt nu Kaels oude gear, met 4★ Speed-boots (SPD 16). Dat is genoeg om te levelen."
   ],
   "kael": {
    "current": {
-    "HP": 15289,
-    "ATK": 1486,
-    "DEF": 1309,
-    "SPD": 183,
+    "HP": 22921,
+    "ATK": 2354,
+    "DEF": 1804,
+    "SPD": 203,
     "CRATE": 44,
-    "CDMG": 78,
-    "RES": 46,
+    "CDMG": 85,
+    "RES": 57,
     "ACC": 137
    },
    "proposed": null,
-   "proposedNote": "Optimizer-build geëquipt op 13 okt. Totalen = de optimizer-preview van die build (dezelfde stukken), niet opnieuw uitgelezen.",
+   "proposedNote": "Uitgelezen uit de optimizer op 13 okt, 15:40. Rank 6, L60, alle gear op +16 (behalve de ring).",
    "targets": [
     {
      "stat": "CRATE",
@@ -60,13 +60,13 @@
     "hh-opt"
    ]
   },
-  "missionTitle": "Opdracht 2: Kael naar 6★ en Kaels gear repareren",
+  "missionTitle": "Opdracht 3: Dorothy naar L50 en Kael afwerken",
   "name": "Swypax ftp 26",
-  "report": "Kaels rank, Crit Rate en Speed, het level van Dorothy, en de hoogste stage op Hard/Brutal.",
+  "report": "Dorothys level, Kaels Crit Rate en masteries, de hoogste stage op Hard/Brutal, en je Clan Boss-schade op Normal.",
   "rules": [
    {
-    "d": "XP en silver gaan naar Kael tot hij 6★ is. Hij is je farmer.",
-    "t": "Eerst Kael"
+    "d": "Kael is Rank 6. XP en silver gaan nu eerst naar Dorothy, tot zij L50 en Rank 6 is.",
+    "t": "Eerst Dorothy"
    },
    {
     "d": "Commons, Uncommons en zwakke Rares krijgen geen silver, gear of boeken.",
@@ -85,7 +85,7 @@
     "t": "Gear"
    }
   ],
-  "synced": "13 okt 2026, 15:30",
+  "synced": "13 okt 2026, 15:40",
   "account": {
    "clan": "C1C-NOVUS",
    "createdOn": "2026-10-01",
@@ -115,52 +115,46 @@
  },
  "tasks": [
   {
-   "done": true,
+   "id": "t05",
    "order": 1,
-   "text": "Verplaats de 6★ ATK%-chest van Skullsworn naar Kael.",
-   "id": "t01"
+   "done": false,
+   "text": "Level Dorothy naar L50 in je campagne-farmteam (nu L19)."
   },
   {
-   "done": true,
+   "id": "t09",
    "order": 2,
-   "text": "Zet de ongebruikte 4★ Speed-boots op Kael en upgrade ze naar +8.",
-   "id": "t02"
+   "done": false,
+   "text": "Kael: ontgrendel Warmaster (T6-mastery). Dat kan nu hij Rank 6 is. Farm de scrolls in de Minotaur."
   },
   {
-   "done": false,
+   "id": "t10",
    "order": 3,
-   "text": "Zoek Crit Rate-gloves en zet de eerste goede op Kael.",
-   "id": "t03"
+   "done": false,
+   "text": "Clan Boss: speel elke dag je 4 keys op Normal. Kaels 137 Accuracy haalt het doel van 100."
   },
   {
-   "done": true,
+   "id": "t11",
    "order": 4,
-   "text": "Laat 'Find Builds' voor Kael draaien in de HH Optimizer (Crit Rate eerst, Speed tweede).",
-   "id": "t04"
+   "done": false,
+   "text": "Farm Magic- en Arcane-potions in de Keeps voor Kaels ascension."
   },
   {
-   "done": false,
+   "id": "t03",
    "order": 5,
-   "text": "Level Dorothy naar L50 door haar mee te nemen in je campagne-farmteam.",
-   "id": "t05"
+   "done": false,
+   "text": "Zoek Crit Rate-gloves en zet de eerste goede op Kael."
   },
   {
-   "done": true,
+   "id": "t12",
    "order": 6,
-   "text": "Breng twee 4★-champions naar 5★ (Berserker L34, Warmaiden L13, Berserker of Outlander). Per stuk: 4 food van 4★.",
-   "id": "t06"
+   "done": false,
+   "text": "Zet de ongebruikte 5★ HP-ring op Kael in plaats van de 3★-ring, en upgrade hem."
   },
   {
-   "done": false,
+   "id": "t08",
    "order": 7,
-   "text": "Kael naar 6★: offer Hound Spawn, Siegebreaker, beide Warmaidens (5★) en Berserker (5★). Alle vijf liggen klaar.",
-   "id": "t07"
-  },
-  {
    "done": false,
-   "order": 8,
-   "text": "Speel de Hard-campagne verder en start daarna Brutal.",
-   "id": "t08"
+   "text": "Speel de Hard-campagne verder (nu 103 sterren) en start daarna Brutal."
   }
  ],
  "champions": [
@@ -168,18 +162,18 @@
    "affinity": "Magic",
    "detail": "Je farmer en poison-dealer. Boeken zijn vol (14/14). Zwak punt is gear: 29% Crit Rate en 15 Accuracy.",
    "faction": "Dark Elves",
-   "grade": 5,
-   "level": 50,
+   "grade": 6,
+   "level": 60,
    "name": "Kael",
-   "next": "6★ via 5 food van 5★ (3 klaar). Gear repareren.",
-   "note": "Farmer, poison. Boeken 14/14, 14 masteries.",
+   "next": "Rank 6 bereikt. Nu: Crit Rate-gloves, Warmaster, ascension.",
+   "note": "Farmer, poison. Rank 6 sinds 13 okt. Boeken vol, 14 masteries.",
    "prio": 1,
    "rarity": 3,
    "role": "kern",
    "id": "c01",
    "slug": "kael",
    "profile": {
-    "roleText": "Farmer en poison-dealer. Hij draagt het account tot hij 6★ is: XP en silver gaan eerst naar hem.",
+    "roleText": "Farmer en poison-dealer. Sinds 13 okt Rank 6. Hij blijft je farmer, maar XP en silver gaan nu eerst naar Dorothy.",
     "aura": {
      "text": "15% HP voor alle bondgenoten",
      "area": "Alle gevechten",
@@ -248,21 +242,21 @@
       "slot": "Wapen",
       "set": 24,
       "stars": 4,
-      "lvl": 12,
+      "lvl": 16,
       "main": "ATK"
      },
      {
       "slot": "Helm",
       "set": 38,
       "stars": 5,
-      "lvl": 12,
+      "lvl": 16,
       "main": "HP"
      },
      {
       "slot": "Schild",
       "set": 33,
       "stars": 4,
-      "lvl": 12,
+      "lvl": 16,
       "main": "DEF"
      },
      {
@@ -276,15 +270,15 @@
       "slot": "Chest",
       "set": 38,
       "stars": 6,
-      "lvl": 12,
-      "main": "ATK 39%"
+      "lvl": 16,
+      "main": "ATK 60%"
      },
      {
       "slot": "Boots",
       "set": 38,
       "stars": 6,
-      "lvl": 12,
-      "main": "SPD 29"
+      "lvl": 16,
+      "main": "SPD 45"
      },
      {
       "slot": "Ring",
@@ -319,7 +313,7 @@
       "ay-kael"
      ]
     },
-    "next": "Rank 6: je hebt nu vijf 5★-food (Hound Spawn, Siegebreaker, 2× Warmaiden, Berserker). Offer ze in de Tavern. Daarna Crit Rate-gloves zoeken.",
+    "next": "Crit Rate-gloves zoeken (nu 44%). Warmaster (T6) ontgrendelen, want dat kan op Rank 6. Ascension-potions farmen in de Magic en Arcane Keep.",
     "nextSrc": [
      "hh-chicken"
     ]
@@ -329,7 +323,7 @@
    "affinity": "Spirit",
    "faction": "Sacred Order",
    "grade": 3,
-   "level": 29,
+   "level": 30,
    "name": "Warpriest",
    "note": "Healer + team-ATK-buff. Nuttig tot ongeveer L50.",
    "rarity": 3,
@@ -431,17 +425,6 @@
      "hh-warpriest"
     ]
    }
-  },
-  {
-   "affinity": "Force",
-   "faction": "Demonspawn",
-   "grade": 5,
-   "level": 1,
-   "name": "Hound Spawn",
-   "note": "5★-food, klaar voor Kael 6★.",
-   "rarity": 3,
-   "role": "food",
-   "id": "c03"
   },
   {
    "affinity": "Spirit",
@@ -699,7 +682,7 @@
    "grade": 3,
    "level": 18,
    "name": "Skullsworn",
-   "note": "Draagt een 6★ ATK%-chest: verplaatsen naar Kael.",
+   "note": "Food. Zijn 6★ ATK%-chest zit nu op Kael.",
    "rarity": 3,
    "role": "food",
    "id": "c06"
@@ -714,17 +697,6 @@
    "rarity": 3,
    "role": "food",
    "id": "c08"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Ogryn Tribes",
-   "grade": 5,
-   "level": 1,
-   "name": "Siegebreaker",
-   "note": "5★-food, klaar voor Kael 6★.",
-   "rarity": 3,
-   "role": "food",
-   "id": "c11"
   },
   {
    "affinity": "Spirit",
@@ -839,17 +811,6 @@
    }
   },
   {
-   "affinity": "Force",
-   "faction": "Barbarians",
-   "grade": 5,
-   "level": 1,
-   "name": "Warmaiden",
-   "note": "5★-food, klaar voor Kael 6★. A3: 30% AoE Decrease DEF (75% kans).",
-   "rarity": 3,
-   "role": "food",
-   "id": "c15"
-  },
-  {
    "affinity": "Magic",
    "faction": "Sacred Order",
    "grade": 1,
@@ -859,28 +820,6 @@
    "rarity": 1,
    "role": "food",
    "id": "c20"
-  },
-  {
-   "affinity": "Force",
-   "faction": "Barbarians",
-   "grade": 5,
-   "level": 1,
-   "name": "Warmaiden",
-   "note": "5★-food, klaar voor Kael 6★. (net naar 5★ gebracht)",
-   "rarity": 3,
-   "role": "food",
-   "id": "c23"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 5,
-   "level": 1,
-   "name": "Berserker",
-   "note": "5★-food, klaar voor Kael 6★. (net naar 5★ gebracht)",
-   "rarity": 3,
-   "role": "food",
-   "id": "c28"
   },
   {
    "affinity": "Spirit",
@@ -906,12 +845,12 @@
   },
   {
    "affinity": "Spirit",
-   "detail": "Gratis loyalty-Legendary. A1 zet Weaken (25%), A2 zet 60% Decrease DEF en 50% Decrease ACC op alle vijanden, A3 steelt buffs en kan stunnen. Haar aura geeft 19% SPD in alle gevechten. Ze draagt 6★ Speed-boots.",
+   "detail": "Gratis loyalty-Legendary. A1 zet Weaken (25%), A2 zet 60% Decrease DEF en 50% Decrease ACC op alle vijanden, A3 steelt buffs en kan stunnen. Haar aura geeft 19% SPD in alle gevechten. Haar 6★ Speed-boots zitten nu op Kael; ze draagt 4★ Speed-boots.",
    "faction": "Banner Lords",
    "grade": 5,
-   "level": 10,
+   "level": 19,
    "name": "Dorothy Gale",
-   "next": "Naar L50 in de campagne. Daarna Legendary tomes op A2 en 6★ na Kael.",
+   "next": "Naar L50 in de campagne (nu L19). Daarna Legendary tomes op A2 en Rank 6.",
    "note": "Support: Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura.",
    "prio": 2,
    "rarity": 5,
@@ -1002,11 +941,46 @@
     ],
     "gearAsReported": [
      {
-      "slot": "Let op",
-      "set": null,
-      "stars": null,
-      "lvl": null,
-      "main": "Wapen, gloves en Speed-boots zijn op 13 okt naar Kael verplaatst. Haar huidige gear is na de sync niet opnieuw uitgelezen."
+      "slot": "Helm",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "HP"
+     },
+     {
+      "slot": "Chest",
+      "set": 1,
+      "stars": 3,
+      "lvl": 12,
+      "main": "HP 19%"
+     },
+     {
+      "slot": "Boots",
+      "set": 13,
+      "stars": 4,
+      "lvl": 8,
+      "main": "SPD 16"
+     },
+     {
+      "slot": "Gloves",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "C.DMG 42%"
+     },
+     {
+      "slot": "Wapen",
+      "set": 2,
+      "stars": 4,
+      "lvl": 12,
+      "main": "ATK"
+     },
+     {
+      "slot": "Schild",
+      "set": 38,
+      "stars": 6,
+      "lvl": 16,
+      "main": "DEF"
      }
     ],
     "ascendNext": {
@@ -1913,7 +1887,7 @@
     "Vijf champions van dezelfde factie",
     "Heling, Decrease DEF en AoE binnen die factie"
    ],
-   "note": "Shieldguard: de spelgegevens tonen een kans op Decrease SPD en een AoE die met DEF schaalt, maar geen debuff-removal.",
+   "note": "Na de rank-up van Kael zijn de sterkste Barbarians opgeofferd. Dit team is te zwak om te spelen. Faction Wars blijft 'later'.",
    "order": 22,
    "purpose": "Elke crypt laat alleen champions van één factie toe. Je hebt nu 1 ster.",
    "short": "Faction Wars",
@@ -1921,23 +1895,23 @@
    "team": [
     {
      "cid": "c13",
-     "role": "AoE A1. A3-Turn Meter volgens de bronnen (niet bevestigd)"
+     "role": "AoE A1 (Turn Meter-effect op A3 niet bevestigd)"
     },
     {
-     "cid": "c23",
+     "cid": "c08",
      "role": "30% AoE Decrease DEF (75% kans)"
     },
     {
-     "cid": "c28",
-     "role": "Schade"
-    },
-    {
      "cid": "c30",
-     "role": "A1: kans op 15% Decrease SPD. A2: AoE die met DEF schaalt (de Shieldguard op L30 is opgeofferd; deze is L1)"
+     "role": "Kans op Decrease SPD, AoE die met DEF schaalt"
     },
     {
-     "cid": "c15",
-     "role": "Tweede 30% AoE Decrease DEF (75% kans)"
+     "cid": "h388",
+     "role": "Opvulling (Common)"
+    },
+    {
+     "cid": "h393",
+     "role": "Opvulling (Common)"
     }
    ],
    "id": "factionwars",
