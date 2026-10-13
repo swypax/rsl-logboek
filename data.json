@@ -10,8 +10,8 @@
   "gearFixes": [
    "Speed 203 en Accuracy 137: Speed haalt het doel, Accuracy volstaat voor Clan Boss Normal (100), niet voor Hard (150).",
    "Crit Rate blijft op 44%. Dat lost alleen Crit Rate-gloves op, en die staan nog altijd niet op het account.",
-   "Ring is 3★ +8. Een betere ring (bv. de ongebruikte 5★ HP-ring) is een goedkope verbetering.",
-   "Dorothy draagt nu Kaels oude gear, met 4★ Speed-boots (SPD 16). Dat is genoeg om te levelen."
+   "Dorothy draagt nu Kaels oude gear, met 4★ Speed-boots (SPD 16). Dat is genoeg om te levelen.",
+   "Ringen, amuletten en banners zijn factiegebonden. Kael kan alleen Dark Elves-accessoires dragen, en er is geen betere Dark Elves-ring dan de zijne. Upgrade zijn huidige ring verder als je silver over hebt."
   ],
   "kael": {
    "current": {
@@ -145,14 +145,8 @@
    "text": "Zoek Crit Rate-gloves en zet de eerste goede op Kael."
   },
   {
-   "id": "t12",
-   "order": 6,
-   "done": false,
-   "text": "Zet de ongebruikte 5★ HP-ring op Kael in plaats van de 3★-ring, en upgrade hem."
-  },
-  {
    "id": "t08",
-   "order": 7,
+   "order": 6,
    "done": false,
    "text": "Speel de Hard-campagne verder (nu 103 sterren) en start daarna Brutal."
   }
@@ -2203,7 +2197,7 @@
     "set": 4
    },
    {
-    "text": "Ring 5★ +8: HP 1638, HP 12%",
+    "text": "Ring 5★ +8: HP 1638, HP 12%. Alleen voor High Elves: past op geen enkele champion die je nu bouwt.",
     "set": null
    },
    {
@@ -2350,7 +2344,8 @@
   ],
   "mainStatsSrc": [
    "ay-artifacts"
-  ]
+  ],
+  "notes": []
  },
  "guide": {
   "terms": [
@@ -2542,6 +2537,14 @@
      "hh-opt",
      "ay-wukong"
     ]
+   },
+   {
+    "term": "Accessoires (ring, amulet, banner)",
+    "kind": "mechaniek",
+    "nl": "Elk accessoire hoort bij één factie. Alleen champions van die factie kunnen het dragen: een Dark Elves-ring past op Kael, een High Elves-ring niet. Bron: de factie staat in de accountdata bij elk accessoire.",
+    "src": [
+     "hh-opt"
+    ]
    }
   ],
   "affinity": {
@@ -2649,7 +2652,8 @@
    "notes": [
     "Crit Rate blijft 44%. Alleen Crit Rate-gloves lossen dat op, en die staan nog niet op het account.",
     "Accuracy 137 is te laag voor Clan Boss Hard (150).",
-    "Faction Wars is uitgehold: de sterkste Barbarians gingen op aan Kael. Dat was de prijs waard."
+    "Faction Wars is uitgehold: de sterkste Barbarians gingen op aan Kael. Dat was de prijs waard.",
+    "Correctie: de 5★ HP-ring is een High Elves-ring en past niet op Kael. Accessoires zijn factiegebonden. De taak is geschrapt."
    ],
    "next": [
     "Level Dorothy naar L50.",

@@ -4,3 +4,4 @@
 - 2026-10-13 15:30: sync. Optimizer-build op Kael (SPD 183, ACC 137, CR 44%). Vijf 5★-food klaar voor Kael 6★. Roster 37 champions.
 - 2026-10-13 15:40: sync. Kael Rank 6 L60 (SPD 203, ACC 137, CR 44%). Opdracht 3 gestart: Dorothy naar L50, Kael afwerken.
 - 2026-10-13: Syncs-sectie toegevoegd: laatste sync op Overzicht, volledige geschiedenis en Kaels evolutie op #/syncs.
+- 2026-10-13: correctie. De 5★-ring is High Elves en past niet op Kael (accessoires zijn factiegebonden). Taak geschrapt.
