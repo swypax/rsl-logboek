@@ -117,3 +117,24 @@ Open daarna http://localhost:8000.
 
 ### `sources[]`
 `{id, title, url, supports}`. `supports` beschrijft wat de bron staaft.
+
+## Sync-procedure (verplicht bij elke sync)
+Na elke sync met de HellHades Optimizer:
+1. Werk de accountstand bij: `meta` (campagne, `kael.current`), `tasks`, en de rank, level en gear van de `champions`.
+2. Zet **bovenaan** `syncs[]` een nieuw item. De site toont het nieuwste item als "Laatste sync" op Overzicht, en alle items op `#/syncs`.
+
+```json
+{
+  "id": "2026-10-13-1540",
+  "date": "13 okt 2026, 15:40",
+  "title": "Kael is Rank 6",
+  "highlights": ["belangrijkste punten, 1-3"],
+  "changes": ["wat veranderde sinds de vorige sync"],
+  "notes": ["kanttekeningen en kritiek"],
+  "next": ["volgende stappen"],
+  "kael": {"grade": 6, "level": 60, "HP": 0, "ATK": 0, "DEF": 0, "SPD": 0, "CRATE": 0, "CDMG": 0, "RES": 0, "ACC": 0},
+  "campaignHard": 103
+}
+```
+
+De tabel "Kaels evolutie" op `#/syncs` wordt automatisch opgebouwd uit `syncs[].kael`.

@@ -2627,5 +2627,117 @@
     ]
    }
   ]
- }
+ },
+ "syncs": [
+  {
+   "id": "2026-10-13-1540",
+   "date": "13 okt 2026, 15:40",
+   "title": "Kael is Rank 6",
+   "highlights": [
+    "Kael is Rank 6, level 60. Opdracht 2 is afgerond.",
+    "Speed 203 haalt het doel. Accuracy 137 volstaat voor Clan Boss Normal.",
+    "Opdracht 3 gestart: Dorothy naar L50 en Kael afwerken."
+   ],
+   "changes": [
+    "Kael: 5★ L50 naar 6★ L60. Alle gear op +16, behalve de ring.",
+    "Opgeofferd voor Kael: Hound Spawn, Siegebreaker, 2× Warmaiden en Berserker (alle 5★).",
+    "Dorothy: L10 naar L19. Ze draagt nu Kaels oude gear, met 4★ Speed-boots (SPD 16).",
+    "Warpriest: L29 naar L30.",
+    "Hard-campagne: 88 naar 103 sterren.",
+    "Roster: 37 naar 32 champions."
+   ],
+   "notes": [
+    "Crit Rate blijft 44%. Alleen Crit Rate-gloves lossen dat op, en die staan nog niet op het account.",
+    "Accuracy 137 is te laag voor Clan Boss Hard (150).",
+    "Faction Wars is uitgehold: de sterkste Barbarians gingen op aan Kael. Dat was de prijs waard."
+   ],
+   "next": [
+    "Level Dorothy naar L50.",
+    "Ontgrendel Warmaster voor Kael (scrolls uit de Minotaur).",
+    "Speel elke dag 4 keys op Clan Boss Normal.",
+    "Farm Magic- en Arcane-potions voor Kaels ascension."
+   ],
+   "kael": {
+    "grade": 6,
+    "level": 60,
+    "HP": 22921,
+    "ATK": 2354,
+    "DEF": 1804,
+    "SPD": 203,
+    "CRATE": 44,
+    "CDMG": 85,
+    "RES": 57,
+    "ACC": 137
+   },
+   "campaignHard": 103
+  },
+  {
+   "id": "2026-10-13-1530",
+   "date": "13 okt 2026, 15:30",
+   "title": "Optimizer-build op Kael",
+   "highlights": [
+    "De optimizer-build staat op Kael: Speed 183, Accuracy 137, Crit Rate 44%.",
+    "Vijf food-champions van 5★ klaar voor Kael 6★."
+   ],
+   "changes": [
+    "Kael draagt 4 stukken Perception (Set #38), met de 6★ ATK%-chest van Skullsworn en Dorothy's 6★ Speed-boots.",
+    "Warmaiden en Berserker naar 5★ gebracht.",
+    "Dorothy: L9 naar L10.",
+    "Hard-campagne: 87 naar 88 sterren.",
+    "Roster: 47 naar 37 champions. Veel food opgeofferd, nieuwe Commons erbij."
+   ],
+   "notes": [
+    "Het account veranderde tijdens de sync. Deze stand is een momentopname.",
+    "Kaels stats komen uit de optimizer-preview van deze build, niet opnieuw uitgelezen."
+   ],
+   "next": [
+    "Offer de vijf 5★-food aan Kael in de Tavern."
+   ],
+   "kael": {
+    "grade": 5,
+    "level": 50,
+    "HP": 15289,
+    "ATK": 1486,
+    "DEF": 1309,
+    "SPD": 183,
+    "CRATE": 44,
+    "CDMG": 78,
+    "RES": 46,
+    "ACC": 137
+   },
+   "campaignHard": 88
+  },
+  {
+   "id": "2026-10-13-ochtend",
+   "date": "13 okt 2026, ochtend",
+   "title": "Eerste sync",
+   "highlights": [
+    "Opdracht 1 afgerond: Kael 5★ L50, Normal-campagne volledig uitgespeeld.",
+    "Dorothy Gale (Legendary) ontdekt: prioriteit 2, vóór Sun Wukong."
+   ],
+   "changes": [
+    "Eerste uitlezing van het account: 47 champions."
+   ],
+   "notes": [
+    "Kael had 29% Crit Rate, 107 Speed en 15 Accuracy: zijn gear volgde het plan niet.",
+    "Er staan geen Crit Rate-gloves op het account."
+   ],
+   "next": [
+    "Opdracht 2: Kael naar 6★ en zijn gear repareren."
+   ],
+   "kael": {
+    "grade": 5,
+    "level": 50,
+    "HP": 21591,
+    "ATK": 1352,
+    "DEF": 1257,
+    "SPD": 107,
+    "CRATE": 29,
+    "CDMG": 149,
+    "RES": 71,
+    "ACC": 15
+   },
+   "campaignHard": 87
+  }
+ ]
 }

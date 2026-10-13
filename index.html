@@ -60,6 +60,14 @@ header.top{display:grid;gap:12px}
 .toprow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
 .meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:.92rem}
 .themebtn{font:inherit;font-size:.85rem;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:99px;padding:4px 12px;cursor:pointer}
+/* syncs */
+.sync{display:grid;gap:10px}
+.sync h3{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.sync h3 .num{font-family:var(--f-mono);font-size:.85rem;color:var(--muted);font-weight:400}
+.sync ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.sync .hl li::marker{color:var(--accent)}
+.sync .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.sync .cols > div{min-width:0;display:grid;gap:6px;align-content:start}
 /* nav */
 nav.main{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:8px 16px}
 nav.main ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin}
@@ -209,6 +217,7 @@ footer{font-size:.85rem;color:var(--muted);display:grid;gap:4px}
   <nav class="main" aria-label="Secties">
     <ul>
       <li><a href="#/overzicht" data-r="overzicht">Overzicht</a></li>
+      <li><a href="#/syncs" data-r="syncs">Syncs</a></li>
       <li><a href="#/champions" data-r="champions">Champions</a></li>
       <li><a href="#/teams" data-r="teams">Teams</a></li>
       <li><a href="#/gear" data-r="gear">Gear</a></li>
@@ -301,6 +310,7 @@ function viewOverzicht(){
   const gh = (acc.greatHall||[]).map(g=>`${esc(g.affinity)}: ${esc(g.stat)} niv. ${g.level}`).join(" · ");
   const cores = state.champs.filter(c=>c.role==="kern").sort((a,b)=>(a.prio||9)-(b.prio||9));
   return `
+  ${syncCard((state.data.syncs||[])[0], true)}
   <section aria-labelledby="h-acc">
     <h2 id="h-acc">Account</h2>
     <div class="grid2">
@@ -629,6 +639,41 @@ function viewBronnen(){
   </section>`;
 }
 
+
+/* ---------- syncs ---------- */
+function syncStats(k){
+  if(!k) return "";
+  const cells = Object.keys(STAT_LABEL).filter(s=>s in k).map(s=>`<tr><th scope="row">${STAT_LABEL[s]}</th><td class="r num">${fmt(k[s])}${PCT.has(s)?"%":""}</td></tr>`).join("");
+  return `<div class="tbl"><table class="narrow"><thead><tr><th scope="col">Kael${k.grade?` · ${"★".repeat(k.grade)} L${k.level}`:""}</th><th scope="col" class="r">Waarde</th></tr></thead><tbody>${cells}</tbody></table></div>`;
+}
+function syncCard(s, compact){
+  if(!s) return "";
+  const list = (arr, cls) => (arr&&arr.length) ? `<ul class="${cls||""}">${arr.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>` : "";
+  const head = compact
+    ? `<div class="sec-head"><h2 id="h-lastsync">Laatste sync</h2><a href="#/syncs">Alle syncs</a></div>`
+    : "";
+  return `<section class="sync" ${compact?'aria-labelledby="h-lastsync"':''}>${head}
+    <div class="card sync">
+      <h3>${esc(s.title||"Sync")} <span class="num">${esc(s.date)}</span></h3>
+      ${list(s.highlights,"hl")}
+      <div class="cols">
+        ${s.changes&&s.changes.length?`<div><div class="eyebrow">Wat veranderde</div>${list(s.changes)}</div>`:""}
+        ${s.notes&&s.notes.length?`<div><div class="eyebrow">Kanttekeningen</div>${list(s.notes)}</div>`:""}
+        ${!compact&&s.kael?`<div><div class="eyebrow">Kaels stats bij deze sync</div>${syncStats(s.kael)}</div>`:""}
+      </div>
+      ${s.next&&s.next.length?`<div><div class="eyebrow">Volgende stappen</div>${list(s.next)}</div>`:""}
+    </div></section>`;
+}
+function viewSyncs(){
+  const ss = state.data.syncs||[];
+  if(!ss.length) return `<div class="empty">Nog geen syncs opgeslagen.</div>`;
+  const withK = ss.filter(s=>s.kael).slice().reverse();
+  const stats = Object.keys(STAT_LABEL).filter(st=>withK.some(s=>st in s.kael));
+  const prog = withK.length>1 ? `<section aria-labelledby="h-prog"><h2 id="h-prog">Kaels evolutie</h2>
+    <div class="tbl"><table><thead><tr><th scope="col">Stat</th>${withK.map(s=>`<th scope="col" class="r">${esc(s.date)}</th>`).join("")}</tr></thead>
+    <tbody>${stats.map(st=>`<tr><th scope="row">${STAT_LABEL[st]}</th>${withK.map(s=>`<td class="r num">${st in s.kael?fmt(s.kael[st])+(PCT.has(st)?"%":""):"–"}</td>`).join("")}</tr>`).join("")}</tbody></table></div></section>` : "";
+  return `<h2>Syncs</h2><p class="note">Na elke sync met de HellHades Optimizer komt hier wat er veranderde, wat het betekent en wat de volgende stap is. Nieuwste eerst.</p>${prog}${ss.map(s=>syncCard(s,false)).join("")}`;
+}
 /* ---------- router ---------- */
 function route(){
   if(!state.data) return;
@@ -639,6 +684,7 @@ function route(){
   switch(r){
     case "champions": if(sub){ html = viewChampion(sub); title = (state.bySlug[sub]||{}).name||"Champion"; } else { html = viewChampions(); bind = bindChampions; title = "Champions"; } break;
     case "teams": html = viewTeams(sub); title = "Teams"; break;
+    case "syncs": html = viewSyncs(); title = "Syncs"; break;
     case "gear": html = viewGear(); title = "Gear"; break;
     case "gids": html = viewGids(); title = "Gids"; break;
     case "bronnen": html = viewBronnen(); title = "Bronnen"; break;
