@@ -9,16 +9,65 @@
   },
   "gearFixes": [
    "Gloves zijn Crit Damage (42%), niet Crit Rate. Er staan geen Crit Rate-gloves op het account: gebruik de eerste goede die dropt, ook een Epic.",
-   "Chest is HP% (19%). De 6★ ATK%-chest (39%) op Skullsworn gaat naar Kael.",
-   "Geen Speed-boots: zet de ongebruikte 4★ Speed-boots op Kael en upgrade naar +8.",
+   "Chest is volgens de export van 13 okt nog HP% (19%, Set #1). De 6★ ATK%-chest van Skullsworn zit in het optimizer-voorstel. Controleer of taak 1 echt in het spel gebeurd is.",
+   "De export toont geen Speed-boots op Kael. De ongebruikte 4★ Speed-boots liggen nog in de kluis (Set #13). Controleer taak 2 in het spel.",
    "Laat 'Find Builds' in de HH Optimizer draaien: 69 stukken liggen ongebruikt."
   ],
   "kael": {
-   "acc": 15,
-   "atk": 1352,
-   "cd": 149,
-   "cr": 29,
-   "spd": 107
+   "current": {
+    "HP": 21591,
+    "ATK": 1352,
+    "DEF": 1257,
+    "SPD": 107,
+    "CRATE": 29,
+    "CDMG": 149,
+    "RES": 71,
+    "ACC": 15
+   },
+   "proposed": {
+    "HP": 15289,
+    "ATK": 1486,
+    "DEF": 1309,
+    "SPD": 183,
+    "CRATE": 44,
+    "CDMG": 78,
+    "RES": 46,
+    "ACC": 137
+   },
+   "proposedNote": "Optimizer-voorstel, nog niet geëquipt. Neemt wapen, gloves (+16) en 6★ Speed-boots van Dorothy, plus de 6★ ATK%-chest van Skullsworn.",
+   "targets": [
+    {
+     "stat": "CRATE",
+     "label": "Crit Rate",
+     "value": 85,
+     "unit": "%",
+     "why": "Acid Rain (A2) krijgt 15% extra critkans. Met 85% Crit Rate is elke A2-hit een crit (85 + 15 = 100).",
+     "src": [
+      "hh-opt"
+     ]
+    },
+    {
+     "stat": "SPD",
+     "label": "Speed",
+     "value": 170,
+     "unit": "",
+     "why": "Eigen doel uit het accountplan, geen bronwaarde.",
+     "src": []
+    },
+    {
+     "stat": "ACC",
+     "label": "Accuracy",
+     "value": 100,
+     "unit": "",
+     "why": "Minimum voor Clan Boss Normal volgens DeadwoodJedi (Easy 70, Hard 150).",
+     "src": [
+      "dwj-cb"
+     ]
+    }
+   ],
+   "src": [
+    "hh-opt"
+   ]
   },
   "missionTitle": "Opdracht 2: Kael naar 6★ en Kaels gear repareren",
   "name": "Swypax ftp 26",
@@ -33,7 +82,7 @@
     "t": "Food"
    },
    {
-    "d": "Rare naar nuttige Rares (Kael is vol). Epic bewaren. Legendary eerst naar Dorothy (A2), daarna Sun Wukong.",
+    "d": "Rare naar nuttige Rares (Kael is vol). Epic bewaren. Legendary eerst naar Dorothy A2 (kans naar 100%, daarna cooldown), daarna Sun Wukong.",
     "t": "Tomes"
    },
    {
@@ -45,7 +94,33 @@
     "t": "Gear"
    }
   ],
-  "synced": "13 okt 2026"
+  "synced": "13 okt 2026",
+  "account": {
+   "clan": "C1C-NOVUS",
+   "createdOn": "2026-10-01",
+   "factionWarsStars": 1,
+   "greatHall": [
+    {
+     "affinity": "Magic",
+     "stat": "Accuracy",
+     "level": 1
+    },
+    {
+     "affinity": "Spirit",
+     "stat": "Accuracy",
+     "level": 1
+    },
+    {
+     "affinity": "Force",
+     "stat": "Accuracy",
+     "level": 1
+    }
+   ],
+   "src": [
+    "hh-opt"
+   ]
+  },
+  "arenaNote": "League-code 4 zoals de export hem geeft. Welke league (Bronze/Silver/Gold + tier) dat precies is, is niet bevestigd."
  },
  "tasks": [
   {
@@ -100,7 +175,7 @@
  "champions": [
   {
    "affinity": "Magic",
-   "detail": "Je farmer en poison-dealer voor Clan Boss en Dragon. Boeken zijn vol. Zijn zwakke punt is gear: 29% Crit Rate.",
+   "detail": "Je farmer en poison-dealer. Boeken zijn vol (14/14). Zwak punt is gear: 29% Crit Rate en 15 Accuracy.",
    "faction": "Dark Elves",
    "grade": 5,
    "level": 50,
@@ -110,7 +185,155 @@
    "prio": 1,
    "rarity": 3,
    "role": "kern",
-   "id": "c01"
+   "id": "c01",
+   "slug": "kael",
+   "profile": {
+    "roleText": "Farmer en poison-dealer. Hij draagt het account tot hij 6★ is: XP en silver gaan eerst naar hem.",
+    "aura": {
+     "text": "15% HP voor alle bondgenoten",
+     "area": "Alle gevechten",
+     "src": [
+      "hh-opt",
+      "ay-kael"
+     ]
+    },
+    "base": {
+     "HP": 81,
+     "ATK": 105,
+     "DEF": 82,
+     "SPD": 103,
+     "RES": 30,
+     "ACC": 0,
+     "CRATE": 15,
+     "CDMG": 50
+    },
+    "ascension": 0,
+    "masteries": 14,
+    "books": {
+     "used": 14,
+     "max": 14,
+     "levels": "A1 6/6 · A2 5/5 · A3 6/6"
+    },
+    "skills": [
+     {
+      "key": "A1",
+      "name": "Dark Bolt",
+      "cd": 0,
+      "textEn": "Attacks 1 enemy. Has an 80% chance of placing a 2.5% Poison debuff for 2 turns.",
+      "nl": "Eén vijand raken, met 80% kans op een kleine poison (2,5% van de max-HP per beurt) voor 2 beurten.",
+      "books": "L2 +5% schade · L3 +10% kans · L4 +5% schade · L5 +10% kans · L6 +10% schade",
+      "src": [
+       "hh-opt",
+       "ay-kael"
+      ]
+     },
+     {
+      "key": "A2",
+      "name": "Acid Rain",
+      "cd": 3,
+      "textEn": "Attacks all enemies. Has an extra 15% chance of inflicting a critical hit. Fill the Turn Meter of this Champion by 25% for each enemy killed.",
+      "nl": "Raakt alle vijanden met 15% extra critkans. Per vijand die sterft, krijgt Kael 25% Turn Meter terug. Daardoor farmt hij golven snel.",
+      "books": "L2-L5: telkens +5% schade",
+      "src": [
+       "hh-opt",
+       "ay-kael"
+      ]
+     },
+     {
+      "key": "A3",
+      "name": "Disintegrate",
+      "cd": 5,
+      "textEn": "Attacks 4 times at random. Has a 40% chance of placing a 5% Poison debuff for 2 turns.",
+      "nl": "Vier losse hits op willekeurige vijanden. Elke hit heeft 40% kans op een grote poison (5%) voor 2 beurten. Vier hits helpen ook om schilden te breken.",
+      "books": "L2 +10% schade · L3 +5% kans · L4 +10% schade · L5 +5% kans · L6 cooldown −1",
+      "src": [
+       "hh-opt",
+       "ay-kael"
+      ]
+     }
+    ],
+    "gearAsReported": [
+     {
+      "slot": "Wapen",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "ATK"
+     },
+     {
+      "slot": "Helm",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "HP"
+     },
+     {
+      "slot": "Schild",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "DEF"
+     },
+     {
+      "slot": "Gloves",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "C.DMG 42%"
+     },
+     {
+      "slot": "Chest",
+      "set": 1,
+      "stars": 3,
+      "lvl": 12,
+      "main": "HP% 19%",
+      "note": "Epic"
+     },
+     {
+      "slot": "Boots",
+      "set": 9,
+      "stars": 5,
+      "lvl": 12,
+      "main": "niet betrouwbaar gerapporteerd"
+     },
+     {
+      "slot": "Ring",
+      "set": null,
+      "stars": 3,
+      "lvl": 8,
+      "main": "niet gerapporteerd"
+     }
+    ],
+    "ascendNext": {
+     "raw": {
+      "Magic (mid)": 6,
+      "Arcane (mid)": 4
+     },
+     "note": "Zo staat het in de export. De HellHades-tabel geeft voor een Rare op ascension-stap 1 4 Lesser Magic + 2 Lesser Arcane. De export komt overeen met stap 6 (6 Greater + 4 Greater). Niet bevestigd welke van de twee klopt: kijk in de Tavern.",
+     "src": [
+      "hh-opt",
+      "hh-ascension"
+     ]
+    },
+    "recMasteries": {
+     "text": "PvE (Campaign, Clan Boss, Dungeons): Offense met o.a. Deadly Precision, Keen Strike, Single Out, Bring it Down, Kill Streak, Warmaster; Support met Pinpoint Accuracy, Arcane Celerity, Evil Eye, Master Hexer.",
+     "src": [
+      "ay-kael"
+     ]
+    },
+    "recGear": {
+     "sets": "Allround: Lifesteal. Arena-nuker: Cruel + Speed.",
+     "slots": "Gloves ATK%/C.RATE/C.DMG · Chest ATK%/ACC · Boots SPD/ATK%",
+     "priority": "Nuker + debuffer: ATK%, C.RATE, C.DMG, SPD, ACC",
+     "src": [
+      "ay-kael"
+     ]
+    },
+    "next": "Rank 6 via vijf 5★-food (Hound Spawn, Siegebreaker en Warmaiden 5★ zijn klaar; nog twee nodig). Daarna Crit Rate-gloves en de optimizer-build.",
+    "nextSrc": [
+     "hh-chicken"
+    ]
+   }
   },
   {
    "affinity": "Spirit",
@@ -121,7 +344,103 @@
    "note": "Healer + team-ATK-buff. Nuttig tot ongeveer L50.",
    "rarity": 3,
    "role": "bewaren",
-   "id": "c02"
+   "id": "c02",
+   "slug": "warpriest",
+   "profile": {
+    "roleText": "Healer en team-ATK-buff voor de vroege fase. Bewaren, niet voeren.",
+    "aura": null,
+    "base": {
+     "HP": 96,
+     "ATK": 57,
+     "DEF": 97,
+     "SPD": 92,
+     "RES": 30
+    },
+    "ascension": null,
+    "masteries": null,
+    "books": {
+     "used": null,
+     "max": 11,
+     "levels": "niet in de export"
+    },
+    "skills": [
+     {
+      "key": "A1",
+      "name": "Admonish",
+      "cd": 0,
+      "textEn": "Attacks 1 enemy. Has a 15% chance of placing a Freeze debuff for 1 turn.",
+      "nl": "Eén vijand raken met 15% kans op 1 beurt Freeze.",
+      "books": "L2 +5% schade · L3 +5% schade · L4 +5% kans · L5 +5% kans · L6 +10% schade",
+      "src": [
+       "hh-opt",
+       "ay-warpriest"
+      ]
+     },
+     {
+      "key": "A2",
+      "name": "Divine Light",
+      "cd": 4,
+      "textEn": "Heals a target ally by 20% of their MAX HP.",
+      "nl": "Heelt één bondgenoot voor 20% van diens max-HP.",
+      "books": "L2 +5% heling · L3 +5% heling · L4 +10% heling · L5 cooldown −1",
+      "extra": [
+       {
+        "text": "Ayumilove toont een extra heling van 10% voor de andere bondgenoten. Die staat niet in de speltekst van dit account; HellHades zegt dat de heling beter wordt na ascension. Niet bevestigd voor dit account.",
+        "src": [
+         "ay-warpriest",
+         "hh-warpriest"
+        ]
+       }
+      ],
+      "src": [
+       "hh-opt",
+       "ay-warpriest"
+      ]
+     },
+     {
+      "key": "A3",
+      "name": "Bless Weapons",
+      "cd": 5,
+      "textEn": "Places a 25% Increase ATK buff on all allies for 2 turns.",
+      "nl": "Geeft het hele team 25% Increase ATK voor 2 beurten.",
+      "books": "L2 cooldown −1 · L3 cooldown −1",
+      "src": [
+       "hh-opt",
+       "ay-warpriest"
+      ]
+     }
+    ],
+    "gearAsReported": [],
+    "ascendNext": {
+     "raw": {
+      "Spirit (low)": 4,
+      "Arcane (low)": 2
+     },
+     "note": "Komt overeen met HellHades voor een Rare op stap 1: 4 Lesser Spirit + 2 Lesser Arcane.",
+     "src": [
+      "hh-opt",
+      "hh-ascension"
+     ]
+    },
+    "recMasteries": {
+     "text": "Support: Steadfast, Lay on Hands, Healing Savior, Rapid Response, Lore of Steel, Cycle of Magic, Spirit Haste, Lasting Gifts.",
+     "src": [
+      "ay-warpriest"
+     ]
+    },
+    "recGear": {
+     "sets": "O.a. Speed, Perception, Immortal, Regeneration.",
+     "slots": "Gloves HP%/DEF% · Chest RES/HP%/DEF%/ACC · Boots SPD/HP%/DEF%",
+     "priority": "Buffer: RES, SPD, HP%, DEF%",
+     "src": [
+      "ay-warpriest"
+     ]
+    },
+    "next": "Meelevelen tot ongeveer L30-L50 als healer. Geen zeldzame boeken; HellHades vindt haar na level 50 weinig waard.",
+    "nextSrc": [
+     "hh-warpriest"
+    ]
+   }
   },
   {
    "affinity": "Force",
@@ -136,7 +455,7 @@
   },
   {
    "affinity": "Spirit",
-   "detail": "A1 kan stunnen, A2 negeert 50% DEF, A3 steelt buffs, en hij herrijst eenmalig. Sterk in Arena, Hydra en Doom Tower. Geen farmer.",
+   "detail": "A1 kan stunnen, A2 negeert 50% DEF en zet Sheep als het doel overleeft, A3 steelt alle buffs en zet Block Buffs. Herrijst drie beurten na zijn dood. Aura 28% SPD, alleen in Arena.",
    "faction": "Skinwalkers",
    "grade": 5,
    "level": 50,
@@ -146,7 +465,138 @@
    "prio": 3,
    "rarity": 5,
    "role": "kern",
-   "id": "c04"
+   "id": "c04",
+   "slug": "sun-wukong",
+   "profile": {
+    "roleText": "Schade en controle. Leider in Arena (aura werkt alleen daar). Geen farmer.",
+    "aura": {
+     "text": "28% SPD voor alle bondgenoten",
+     "area": "Alleen Arena",
+     "src": [
+      "hh-opt",
+      "ay-wukong"
+     ]
+    },
+    "base": {
+     "HP": 96,
+     "ATK": 128,
+     "DEF": 77,
+     "SPD": 105,
+     "RES": 30,
+     "ACC": 0,
+     "CRATE": 15,
+     "CDMG": 50
+    },
+    "ascension": 0,
+    "masteries": 2,
+    "books": {
+     "used": 0,
+     "max": 11,
+     "levels": "alle skills op niveau 1"
+    },
+    "skills": [
+     {
+      "key": "A1",
+      "name": "Gotcha!",
+      "cd": 0,
+      "textEn": "Attacks 1 enemy. Has a 25% chance of placing a Stun debuff for 1 turn. The chance increases to 50% if the target has any buffs.",
+      "nl": "Eén vijand raken met 25% kans op 1 beurt Stun, 50% als het doel een buff heeft.",
+      "books": "L2 +10% schade · L3 +10% kans · L4 +10% schade · L5 +15% kans",
+      "src": [
+       "hh-opt",
+       "ay-wukong"
+      ]
+     },
+     {
+      "key": "A2",
+      "name": "Staff of Wonder",
+      "cd": 4,
+      "textEn": "Attacks 1 enemy. Will ignore 50% of the target's DEF. Will attack all remaining enemies with any surplus damage if the target is killed (also ignores 50% DEF, cannot be critical). If the initial target survives, places a Sheep debuff on them for 1 turn. This debuff cannot be blocked.",
+      "nl": "Zware hit op één vijand die de helft van zijn DEF negeert. Sterft het doel, dan gaat de overschotschade naar de andere vijanden (geen crit). Overleeft het doel, dan wordt het 1 beurt een schaap (Sheep); dat kan niet geblokkeerd worden.",
+      "books": "L2-L4 telkens +10% schade · L5 cooldown −1",
+      "src": [
+       "hh-opt",
+       "ay-wukong"
+      ]
+     },
+     {
+      "key": "A3",
+      "name": "Now You See Us",
+      "cd": 4,
+      "textEn": "Attacks all enemies. Before attacking, steals all buffs from all enemies and then places a Block Buffs debuff on them for 2 turns.",
+      "nl": "Steelt eerst alle buffs van alle vijanden, raakt ze dan allemaal en zet Block Buffs voor 2 beurten.",
+      "books": "L2 +10% schade · L3 +10% schade · L4 cooldown −1",
+      "src": [
+       "hh-opt",
+       "ay-wukong"
+      ]
+     },
+     {
+      "key": "P",
+      "name": "Unbeatable Wukong (passive)",
+      "cd": null,
+      "textEn": "Revives this Champion with 100% HP and 100% Turn Meter 3 turns after they were killed.",
+      "nl": "Drie beurten nadat hij sterft, komt hij terug met volle HP en een volle Turn Meter.",
+      "src": [
+       "ay-wukong"
+      ]
+     }
+    ],
+    "gearAsReported": [
+     {
+      "slot": "Helm",
+      "set": 38,
+      "stars": 5,
+      "lvl": 12,
+      "main": "HP"
+     },
+     {
+      "slot": "Wapen",
+      "set": 38,
+      "stars": 5,
+      "lvl": 12,
+      "main": "ATK"
+     },
+     {
+      "slot": "Overige",
+      "set": null,
+      "stars": 3,
+      "lvl": 12,
+      "main": "mix van Set #2 en Set #1, 3★ Epic",
+      "note": "slots niet apart gerapporteerd"
+     }
+    ],
+    "ascendNext": {
+     "raw": {
+      "Spirit (high)": 2,
+      "Arcane (high)": 2
+     },
+     "note": "Zo staat het in de export. Volgens HellHades is stap 1 voor een Legendary 1 Superior + 5 Greater; 2 + 2 Superior hoort bij stap 2. Niet bevestigd: kijk in de Tavern.",
+     "src": [
+      "hh-opt",
+      "hh-ascension"
+     ]
+    },
+    "recMasteries": {
+     "text": "PvE (alle onderdelen): Offense (Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Cycle of Violence, Bring it Down, Methodical, Kill Streak, Warmaster) en Defense (Defiant, Improved Parry, Bloodthirst, Delay Death, Retribution).",
+     "src": [
+      "ay-wukong"
+     ]
+    },
+    "recGear": {
+     "sets": "O.a. Lifesteal (PvE), Lethal + Perception (aanvaller + debuffer), Speed, Savage.",
+     "slots": "Gloves ATK%/C.RATE/C.DMG · Chest ATK%/ACC · Boots SPD/ATK%",
+     "priority": "Nuker + debuffer: ATK%, C.RATE, C.DMG, SPD, ACC",
+     "src": [
+      "ay-wukong"
+     ]
+    },
+    "next": "Wacht tot Kael en Dorothy rank 6 zijn. Legendary tomes na Dorothy (A2 en A3 hebben upgrades). Scrolls uit Minotaur voor meer masteries.",
+    "nextSrc": [
+     "ay-wukong",
+     "hh-masteries"
+    ]
+   }
   },
   {
    "affinity": "Magic",
@@ -157,7 +607,101 @@
    "note": "Turn Meter-support, sterk in early-to-mid game. In opslag.",
    "rarity": 3,
    "role": "bewaren",
-   "id": "c05"
+   "id": "c05",
+   "slug": "diabolist",
+   "profile": {
+    "roleText": "Turn Meter- en speed-support voor early-to-mid game. In opslag.",
+    "aura": null,
+    "base": {
+     "HP": 102,
+     "ATK": 84,
+     "DEF": 64,
+     "SPD": 105,
+     "RES": 30
+    },
+    "ascension": null,
+    "masteries": null,
+    "books": {
+     "used": null,
+     "max": 10,
+     "levels": "niet in de export"
+    },
+    "skills": [
+     {
+      "key": "A1",
+      "name": "Torment",
+      "cd": 0,
+      "textEn": "Attacks 1 enemy. Has a 10% chance of placing a Sleep debuff for 1 turn.",
+      "nl": "Eén vijand raken met 10% kans op 1 beurt Sleep.",
+      "books": "L2-L4 telkens +5% schade · L5 +5% kans · L6 +5% kans",
+      "src": [
+       "hh-opt",
+       "ay-diabolist"
+      ]
+     },
+     {
+      "key": "A2",
+      "name": "Electric Storm",
+      "cd": 4,
+      "textEn": "Attacks all enemies. Places a 30% Increase SPD buff on all allies for 2 turns.",
+      "nl": "Raakt alle vijanden en geeft het hele team 30% Increase SPD voor 2 beurten.",
+      "books": "L2 +5% schade · L3 +5% schade · L4 cooldown −1",
+      "src": [
+       "hh-opt",
+       "ay-diabolist"
+      ]
+     },
+     {
+      "key": "A3",
+      "name": "Positive Charge",
+      "cd": 6,
+      "textEn": "Fills the Turn Meter of all allies by 15%.",
+      "nl": "Vult de Turn Meter van het hele team met 15%.",
+      "books": "L2 cooldown −1 · L3 cooldown −1",
+      "extra": [
+       {
+        "text": "Ayumilove toont ook 15% Turn Meter-reductie op alle vijanden. Dat staat niet in de speltekst van dit account. Niet bevestigd voor dit account.",
+        "src": [
+         "ay-diabolist",
+         "hh-diabolist"
+        ]
+       }
+      ],
+      "src": [
+       "hh-opt",
+       "ay-diabolist"
+      ]
+     }
+    ],
+    "gearAsReported": [],
+    "ascendNext": {
+     "raw": {
+      "Magic (low)": 4,
+      "Arcane (low)": 2
+     },
+     "note": "Komt overeen met HellHades voor een Rare op stap 1.",
+     "src": [
+      "hh-opt",
+      "hh-ascension"
+     ]
+    },
+    "recMasteries": {
+     "text": "Offense (o.a. Deadly Precision, Keen Strike, Bring it Down, Warmaster) en Support (Steadfast, Exalt in Death, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, Spirit Haste).",
+     "src": [
+      "ay-diabolist"
+     ]
+    },
+    "recGear": {
+     "sets": "Vroeg: Lifesteal + Speed. Verder o.a. Speed, Perception.",
+     "slots": "Gloves HP%/DEF% · Chest ACC/HP%/DEF%/RES · Boots SPD/HP%/DEF%",
+     "priority": "Debuffer: ACC, SPD, HP%, DEF%",
+     "src": [
+      "ay-diabolist"
+     ]
+    },
+    "next": "Bewaren. Pas levelen als het team een snelheids-support nodig heeft; ze staat nu op L18.",
+    "nextSrc": []
+   }
   },
   {
    "affinity": "Force",
@@ -187,7 +731,7 @@
    "grade": 3,
    "level": 10,
    "name": "Warmaiden",
-   "note": "Dorothy neemt Decrease DEF over.",
+   "note": "Food. A3: 30% Decrease DEF op alle vijanden (75% kans). Dorothy doet het sterker (60%).",
    "rarity": 3,
    "role": "food",
    "id": "c08"
@@ -242,10 +786,111 @@
    "grade": 3,
    "level": 1,
    "name": "Soulbond Bowyer",
-   "note": "AoE A1, Turn Meter-reductie. Voor Spider en Fire Knight later. In opslag.",
+   "note": "AoE A1 (extra critkans). A3 met Turn Meter-leegmaken volgens Ayumilove/HellHades, niet zichtbaar in de speltekst. In opslag.",
    "rarity": 3,
    "role": "bewaren",
-   "id": "c13"
+   "id": "c13",
+   "slug": "soulbond-bowyer",
+   "profile": {
+    "roleText": "AoE-aanvaller voor golven en (volgens de bronnen) Turn Meter-controle. Bewaren voor Spider, Fire Knight en Faction Wars.",
+    "aura": {
+     "text": "12% C.RATE voor alle bondgenoten",
+     "area": "Alle gevechten",
+     "src": [
+      "hh-opt",
+      "ay-bowyer"
+     ]
+    },
+    "base": {
+     "HP": 78,
+     "ATK": 99,
+     "DEF": 73,
+     "SPD": 96,
+     "RES": 30
+    },
+    "ascension": null,
+    "masteries": null,
+    "books": {
+     "used": null,
+     "max": 16,
+     "levels": "niet in de export"
+    },
+    "skills": [
+     {
+      "key": "A1",
+      "name": "Ancestral Guidance",
+      "cd": 0,
+      "textEn": "Attacks all enemies. Has an additional 25% chance of inflicting a critical hit.",
+      "nl": "Raakt alle vijanden, met 25% extra critkans. Een AoE op de A1 is zeldzaam en handig tegen golven.",
+      "books": "L2-L4 telkens +5% schade · L5 +10% schade",
+      "src": [
+       "hh-opt",
+       "ay-bowyer"
+      ]
+     },
+     {
+      "key": "A2",
+      "name": "Infused Arrow",
+      "cd": 3,
+      "textEn": "Attacks 1 enemy. Has an additional 25% chance of inflicting a critical hit. Will ignore 75% of the target's DEF.",
+      "nl": "Zware hit op één vijand met 25% extra critkans, die driekwart van zijn DEF negeert.",
+      "books": "L2-L4 telkens +5% schade · L5 +10% schade",
+      "src": [
+       "hh-opt",
+       "ay-bowyer"
+      ]
+     },
+     {
+      "key": "A3",
+      "name": "Soulbound Shot",
+      "cd": 5,
+      "textEn": "Attacks 1 enemy. Has an additional 25% chance of inflicting a critical hit.",
+      "nl": "Zware hit op één vijand met 25% extra critkans.",
+      "books": "L2 +5% schade · L3 +5% kans · L4 +5% schade · L5 +5% kans · L6 +5% schade · L7 +5% kans · L8 +10% kans · L9 cooldown −1",
+      "extra": [
+       {
+        "text": "Ayumilove (bijgewerkt sep 2026) geeft deze skill ook 75% kans om de Turn Meter van het doel volledig leeg te maken; HellHades noemt haar A3 'turn meter depleting'. De boekupgrades verhogen een kans, wat bij zo'n effect past. De speltekst van dit account toont het effect niet: mogelijk komt het pas met ascension. Niet bevestigd voor dit account.",
+        "src": [
+         "ay-bowyer",
+         "hh-bowyer"
+        ]
+       }
+      ],
+      "src": [
+       "hh-opt",
+       "ay-bowyer"
+      ]
+     }
+    ],
+    "gearAsReported": [],
+    "ascendNext": {
+     "raw": {
+      "Spirit (low)": 4,
+      "Arcane (low)": 2
+     },
+     "note": "Komt overeen met HellHades voor een Rare op stap 1.",
+     "src": [
+      "hh-opt",
+      "hh-ascension"
+     ]
+    },
+    "recMasteries": {
+     "text": "Offense (Deadly Precision, Keen Strike, Shield Breaker, Whirlwind of Death, Single Out, Cycle of Violence, Bring it Down, Blood Shield, Kill Streak, Warmaster) en Defense (Defiant, Improved Parry, Bloodthirst, Delay Death, Retribution).",
+     "src": [
+      "ay-bowyer"
+     ]
+    },
+    "recGear": {
+     "sets": "PvE o.a. Lifesteal; verder Speed, Perception, Savage, Cruel.",
+     "slots": "Gloves ATK%/C.RATE/C.DMG · Chest ATK%/ACC · Boots SPD/ATK%",
+     "priority": "Nuker + debuffer: ATK%, C.RATE, C.DMG, SPD, ACC",
+     "src": [
+      "ay-bowyer"
+     ]
+    },
+    "next": "Bewaren op L1. Pas levelen als Kael rank 6 is. Controleer na de eerste ascension of de speltekst van A3 het Turn Meter-effect toont.",
+    "nextSrc": []
+   }
   },
   {
    "affinity": "Spirit",
@@ -264,7 +909,7 @@
    "grade": 5,
    "level": 1,
    "name": "Warmaiden",
-   "note": "5★-food, klaar voor Kael 6★.",
+   "note": "5★-food, klaar voor Kael 6★. A3: 30% AoE Decrease DEF (75% kans).",
    "rarity": 3,
    "role": "food",
    "id": "c15"
@@ -352,7 +997,7 @@
    "grade": 4,
    "level": 13,
    "name": "Warmaiden",
-   "note": "Kandidaat om naar 5★ te brengen.",
+   "note": "Kandidaat om naar 5★ te brengen. A3: 30% AoE Decrease DEF (75% kans).",
    "rarity": 3,
    "role": "food",
    "id": "c23"
@@ -396,7 +1041,7 @@
    "grade": 3,
    "level": 30,
    "name": "Shieldguard",
-   "note": "",
+   "note": "A1: 30% kans op 15% Decrease SPD. A2: AoE, schade schaalt met DEF.",
    "rarity": 2,
    "role": "food",
    "id": "c27"
@@ -590,17 +1235,177 @@
   },
   {
    "affinity": "Spirit",
-   "detail": "Gratis loyalty-Legendary. Haar A2 zet Decrease DEF en Weaken, haar aura geeft 19% SPD. Ze draagt al 6★ Speed-boots.",
+   "detail": "Gratis loyalty-Legendary. A1 zet Weaken (25%), A2 zet 60% Decrease DEF en 50% Decrease ACC op alle vijanden, A3 steelt buffs en kan stunnen. Haar aura geeft 19% SPD in alle gevechten. Ze draagt 6★ Speed-boots.",
    "faction": "Banner Lords",
    "grade": 5,
    "level": 9,
    "name": "Dorothy Gale",
    "next": "Naar L50 in de campagne. Daarna Legendary tomes op A2 en 6★ na Kael.",
-   "note": "Support: Decrease DEF + Weaken, 19% SPD-aura.",
+   "note": "Support: Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura.",
    "prio": 2,
    "rarity": 5,
    "role": "kern",
-   "id": "c45"
+   "id": "c45",
+   "slug": "dorothy-gale",
+   "profile": {
+    "roleText": "Hoofd-debuffer en leider buiten Arena. Weaken, Decrease DEF en Decrease ACC maken het team sterker, haar aura maakt iedereen sneller.",
+    "aura": {
+     "text": "19% SPD voor alle bondgenoten",
+     "area": "Alle gevechten",
+     "src": [
+      "hh-opt",
+      "ay-dorothy"
+     ]
+    },
+    "base": {
+     "HP": 127,
+     "ATK": 70,
+     "DEF": 103,
+     "SPD": 104,
+     "RES": 30,
+     "ACC": 0,
+     "CRATE": 15,
+     "CDMG": 50
+    },
+    "ascension": 0,
+    "masteries": 0,
+    "books": {
+     "used": 0,
+     "max": 11,
+     "levels": "alle skills op niveau 1"
+    },
+    "skills": [
+     {
+      "key": "A1",
+      "name": "Emerald Blast",
+      "cd": 0,
+      "textEn": "Attacks 1 enemy. Has a 75% chance of removing 1 random buff from the target. Also has a 75% chance of placing a 25% Weaken debuff for 2 turns.",
+      "nl": "Eén vijand raken. 75% kans om één buff weg te halen en 75% kans op Weaken (25% meer schade nemen) voor 2 beurten. Weaken zit dus op haar A1.",
+      "books": "L2 +10% schade · L3 +10% kans · L4 +15% kans",
+      "src": [
+       "hh-opt",
+       "ay-dorothy"
+      ]
+     },
+     {
+      "key": "A2",
+      "name": "Windstorm",
+      "cd": 5,
+      "textEn": "Has a 75% chance of placing a 60% Decrease DEF debuff and a 50% Decrease ACC debuff on all enemies for 2 turns.",
+      "nl": "Geen schade. 75% kans om alle vijanden 60% Decrease DEF en 50% Decrease ACC te geven voor 2 beurten.",
+      "books": "L2 +10% kans · L3 +15% kans · L4 cooldown −1 · L5 cooldown −1",
+      "src": [
+       "hh-opt",
+       "ay-dorothy"
+      ]
+     },
+     {
+      "key": "A3",
+      "name": "Furious Tornado",
+      "cd": 6,
+      "textEn": "Attacks all enemies. Steals all buffs from all enemies. Then applies a Buff Spread effect, taking all buffs from this Champion and placing them on all allies. Has a 75% chance to place a Stun debuff on all enemies for 1 turn.",
+      "nl": "Raakt alle vijanden en steelt al hun buffs. Daarna deelt ze haar eigen buffs uit aan het hele team (Buff Spread). 75% kans om alle vijanden 1 beurt te stunnen.",
+      "extra": [
+       {
+        "text": "Oz Unity: met 1 Oz-bondgenoot geen weak hits, met 2 geen cooldown-verlenging, met 3 negeert ze Polymorph-blessings.",
+        "src": [
+         "ay-dorothy"
+        ]
+       }
+      ],
+      "src": [
+       "hh-opt",
+       "ay-dorothy"
+      ]
+     },
+     {
+      "key": "P",
+      "name": "True Friend (passive)",
+      "cd": null,
+      "textEn": "Niet leesbaar in de spelgegevens van de export.",
+      "nl": "Als ze sterft, vallen alle bondgenoten haar moordenaar aan. Als ze herrijst, gebruikt ze meteen Furious Tornado. Ze krijgt HP per beurt van een bondgenoot en SPD per beurt van een vijand, elk tot maximaal 30%.",
+      "src": [
+       "ay-dorothy"
+      ]
+     }
+    ],
+    "gearAsReported": [
+     {
+      "slot": "Wapen",
+      "set": 24,
+      "stars": 4,
+      "lvl": null,
+      "main": "ATK",
+      "note": "substat SPD 10"
+     },
+     {
+      "slot": "Helm",
+      "set": 9,
+      "stars": 5,
+      "lvl": 0,
+      "main": "HP"
+     },
+     {
+      "slot": "Schild",
+      "set": 38,
+      "stars": 6,
+      "lvl": 16,
+      "main": "DEF",
+      "note": "Legendary"
+     },
+     {
+      "slot": "Gloves",
+      "set": 38,
+      "stars": 6,
+      "lvl": 16,
+      "main": "niet gerapporteerd"
+     },
+     {
+      "slot": "Chest",
+      "set": 30,
+      "stars": 4,
+      "lvl": 0,
+      "main": "niet gerapporteerd"
+     },
+     {
+      "slot": "Boots",
+      "set": 38,
+      "stars": 6,
+      "lvl": 12,
+      "main": "SPD 29",
+      "note": "Legendary"
+     }
+    ],
+    "ascendNext": {
+     "raw": {
+      "Spirit (high)": 1,
+      "Arcane (mid)": 5
+     },
+     "note": "Komt overeen met HellHades voor een Legendary op stap 1: 1 Superior Spirit + 5 Greater Arcane.",
+     "src": [
+      "hh-opt",
+      "hh-ascension"
+     ]
+    },
+    "recMasteries": {
+     "text": "PvE: Offense (Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, Kill Streak, Warmaster) en Support (Pinpoint Accuracy, Charged Focus, Swarm Smiter, Arcane Celerity, Lore of Steel, Cycle of Magic, Master Hexer).",
+     "src": [
+      "ay-dorothy"
+     ]
+    },
+    "recGear": {
+     "sets": "PvE en PvP o.a. Accuracy, Perception, Speed, Immortal, Regeneration.",
+     "slots": "Gloves HP%/DEF% · Chest ACC/HP%/DEF% · Boots SPD/HP%/DEF%",
+     "priority": "Debuffer: ACC, SPD, HP%, DEF%",
+     "src": [
+      "ay-dorothy"
+     ]
+    },
+    "next": "Naar L50 in de campagne. Daarna Legendary tomes op A2: twee boeken brengen de kans van 75% naar 100%, de volgende twee verlagen de cooldown. Rank 6 na Kael.",
+    "nextSrc": [
+     "ay-dorothy"
+    ]
+   }
   },
   {
    "affinity": "Magic",
@@ -628,16 +1433,18 @@
  "content": [
   {
    "mechanics": [
-    "Ruim eerst de minions op.",
-    "Hellrazor is immuun voor Speed-debuffs.",
-    "De boss heeft veel HP, dus poison werkt hier erg efficiënt."
+    "Golven voor de boss. Hellrazor raakt je hele team: Swipe zet Decrease ATK, Wall of Fire zet Poison en Weaken.",
+    "Inhale maakt zijn eigen Turn Meter leeg en opent een paarse HP-balk. Breek die voor zijn volgende beurt, anders volgt Scorch: AoE met Stun.",
+    "Immuun voor o.a. Stun, Freeze, Sleep, Provoke, Decrease SPD en Decrease Turn Meter. Wukongs stun werkt dus niet op de boss.",
+    "Stage 21-25 krijgen extra passieven (Almighty Strength en Persistence)."
    ],
    "name": "Dragon's Lair (Hellrazor)",
    "needs": [
     "Poison (Kael)",
-    "Decrease DEF",
-    "Decrease ATK of genoeg heling",
-    "Speed in het team"
+    "Decrease DEF en Weaken (Dorothy)",
+    "Burst om de paarse balk te breken",
+    "Heling (Warpriest)",
+    "Decrease ATK of Resistance (heb je nog niet)"
    ],
    "note": "Begin op een lage stage en ga één stage hoger zodra je die op auto wint. Zolang Dorothy laag level is, sterft ze hier snel: level haar eerst in de campagne.",
    "order": 1,
@@ -651,7 +1458,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken, 19% SPD-aura (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c04",
@@ -666,19 +1473,36 @@
      "role": "Turn Meter voor het team"
     }
    ],
-   "id": "dragon"
+   "id": "dragon",
+   "affinity": "Wisselt per stage. Magic: 1, 5, 9, 13, 17, 20, 22. Force: 2, 6, 10, 14, 18, 21, 25. Spirit: 3, 7, 11, 15, 19, 24. Void: 4, 8, 12, 16, 23.",
+   "drops": "Farmbare sets volgens Ayumilove: Accuracy, Speed, Lifesteal, Destroy, Toxic, Frost, Daze, Avenging, Stalwart. HellHades noemt de Speed-set als reden om hier vroeg te farmen.",
+   "stages": "25 stages (Normal) plus Hard-modus (Tainted Hellrazor).",
+   "plan": [
+    "Level Dorothy eerst naar 50 in de campagne; op L9 sterft ze hier.",
+    "Klim stage per stage. Ga één stage hoger zodra je de huidige op auto wint.",
+    "Je team is grotendeels Spirit (Dorothy, Wukong, Warpriest): op Force-stages (2, 6, 10, 14 ...) heb je voordeel, op Magic-stages (1, 5, 9, 13 ...) krijg je weak hits en landen je debuffs minder.",
+    "Loop je vast op een Magic-stage, farm dan de stage ervoor en sla de Magic-stage later opnieuw aan."
+   ],
+   "src": [
+    "ay-dragon",
+    "hh-dragon",
+    "hh-dungeons",
+    "hh-affinity2"
+   ]
   },
   {
    "mechanics": [
-    "Twee golven vijanden voor de Minotaur zelf.",
-    "Hij heeft een rage-buff die zwaar op je HP slaat.",
-    "Om de drie beurten is hij kwetsbaar: spaar je zwaarste aanvallen voor die beurt."
+    "Twee golven voor de Minotaur.",
+    "Raging Bull: 3 beurten Rage (veel meer schade), daarna 1 beurt Dazed waarin hij 200% meer schade neemt. Spaar A2 en A3 voor die Dazed-beurt.",
+    "Swift Doom zet een onweerstaanbare Hex op 3 doelen; Tremor Stomp doet dubbele schade op wie Hex heeft.",
+    "Immuun voor Stun, Freeze, Sleep, Provoke, Block Active Skills, Fear en True Fear."
    ],
    "name": "Minotaur's Labyrinth",
    "needs": [
-    "Controle (stun) voor de eerste golven",
-    "Burst-schade op de kwetsbare beurt",
-    "Heling"
+    "AoE voor de golven (Kael, Diabolist)",
+    "Burst in de Dazed-beurt (Wukong A2, Kael A2)",
+    "Heling",
+    "Debuff-removal of Block Debuff tegen Hex (heb je nog niet)"
    ],
    "note": "Max eerst lage stages uit. Scrolls zijn op dit moment je bottleneck voor nieuwe masteries.",
    "order": 2,
@@ -696,7 +1520,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -707,28 +1531,43 @@
      "role": "Turn Meter voor het team"
     }
    ],
-   "id": "minotaur"
+   "id": "minotaur",
+   "affinity": "Spirit: 1, 5, 9, 13. Magic: 2, 6, 10, 14. Void: 3, 7, 11, 15. Force: 4, 8, 12.",
+   "drops": "Mastery scrolls: Basic, Advanced en Divine. HellHades: scrolls kun je ook met gems kopen; farmen bespaart gems.",
+   "stages": "15 stages.",
+   "plan": [
+    "Begin op stage 1 en klim zolang je op auto wint.",
+    "Gebruik Wukongs stun alleen op de golven: de boss is immuun.",
+    "Magic-stages (2, 6, 10, 14) zijn het lastigst voor je Spirit-champions.",
+    "Basic scrolls eerst: die zijn nodig voor de eerste mastery-tiers van Dorothy en Wukong."
+   ],
+   "src": [
+    "ay-mino",
+    "hh-mino",
+    "hh-dungeons",
+    "ay-masteries"
+   ]
   },
   {
    "mechanics": [
-    "Elke keep heeft de affiniteit van zijn naam. Arcane heeft geen affiniteit, dus geen voor- of nadeel.",
-    "Magic is sterk tegen Spirit: in de Magic Keep krijgen Spirit-champions (Dorothy, Wukong, Warpriest) harder klappen en raken ze zwakker."
+    "Arcane Keep is elke dag open. Magic Keep: woensdag en zaterdag. Spirit Keep: maandag en donderdag. Force Keep: dinsdag en vrijdag. Void Keep: zondag.",
+    "Elke affiniteits-keep levert alleen potions van die affiniteit.",
+    "Niet bevestigd in de gebruikte bronnen: welke affiniteit de vijanden in elke keep hebben."
    ],
    "name": "Potion Keeps (Arcane en Magic)",
    "needs": [
     "AoE voor de golven",
-    "Heling",
-    "In de Magic Keep: liefst Magic- of Force-champions"
+    "Heling"
    ],
-   "note": "Doe eerst de Arcane Keep, want daar speelt affiniteit geen rol. Kaels ascension geeft hem extra stats zonder nieuwe gear.",
+   "note": "Doe eerst de Arcane Keep: die is elke dag open en elke ascension heeft Arcane-potions nodig.",
    "order": 3,
-   "purpose": "Ascension-potions. Kael heeft Magic- en Arcane-potions nodig om te ascenden.",
+   "purpose": "Ascension-potions. Ascension verhoogt de basisstats zonder nieuwe gear en kan skills versterken.",
    "short": "Potion Keeps",
    "status": "proberen",
    "team": [
     {
      "cid": "c01",
-     "role": "AoE + poison (Magic, neutraal in de Magic Keep)"
+     "role": "AoE + poison"
     },
     {
      "cid": "c04",
@@ -736,7 +1575,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -744,31 +1583,47 @@
     },
     {
      "cid": "c05",
-     "role": "Turn Meter (Magic, neutraal in de Magic Keep)"
+     "role": "AoE (A2) + team-SPD"
     }
    ],
-   "id": "potions"
+   "id": "potions",
+   "drops": "Ascension-potions in drie niveaus: Lesser, Greater en Superior. Elke ascension-stap vraagt Arcane-potions plus potions van de eigen affiniteit.",
+   "affinity": "Niet bevestigd per keep.",
+   "stages": "Niet bevestigd in de gebruikte bronnen.",
+   "plan": [
+    "Kael (Magic): Arcane Keep elke dag, Magic Keep op woensdag en zaterdag.",
+    "Dorothy, Wukong, Warpriest, Bowyer (Spirit): Spirit Keep op maandag en donderdag.",
+    "Een champion kan niet hoger ascenden dan zijn rank. Kael (rank 5) kan tot ascension 5.",
+    "Controleer in de Tavern wat Kael precies nodig heeft: de export en de HellHades-tabel spreken elkaar tegen (zie Kaels pagina)."
+   ],
+   "src": [
+    "hh-ascension",
+    "hh-magic-keep",
+    "hh-arcane-keep",
+    "hh-spirit-keep"
+   ]
   },
   {
    "mechanics": [
-    "Spiderlings vallen aan en zetten poison op je team.",
-    "De spin eet spiderlings op en heelt zichzelf.",
-    "Vanaf stage 15 heeft de spin een eigen heal.",
-    "HP Burn op spiderlings doet ook schade aan de spin."
+    "Geen golven: je vecht meteen tegen Skavag en haar spiderlings.",
+    "Spiderlings verschijnen bij de start, bij elke beurt van je champions en na Skavags beurt (max 10). Elke spiderling kan twee 5%-poisons zetten.",
+    "Skavag eet de spiderlings aan het begin van haar beurt: 3% heling en +10% ATK per stuk.",
+    "Enfeeble: AoE met 70% kans op 30% Turn Meter-reductie; wie op 0% komt, valt in Sleep.",
+    "Immuun voor Stun, Freeze, Sleep, Provoke, Heal Reduction e.a. Turn Meter-reductie werkt wel (vanaf stage 21 maar half).",
+    "Lifesteal heelt hier maar 35% van normaal."
    ],
    "name": "Spider's Den (Skavag)",
    "needs": [
-    "Veel AoE-schade",
-    "Turn Meter-reductie op de spin",
+    "Veel AoE-schade (Kael, Bowyer A1, Diabolist A2)",
+    "Turn Meter-controle op Skavag",
     "Speed",
-    "Heling of revives",
-    "AoE Decrease DEF"
+    "Heling"
    ],
-   "note": "Level Soulbond Bowyer pas naar 50 als Kael 6★ is. HellHades noemt Shieldguard (vertraagt, verwijdert debuffs) als goedkope invaller.",
+   "note": "Accessoires worden belangrijk zodra Kael en Dorothy amulet- en banner-slots hebben. Shieldguard staat niet in dit team: de spelgegevens tonen geen debuff-removal bij hem.",
    "order": 4,
-   "purpose": "Pas zinvol als Soulbond Bowyer geleveld is.",
+   "purpose": "Accessoires en silver. Kael kan de eerste stages al aan; Bowyer pas na zijn rank 6.",
    "short": "Spider",
-   "status": "later",
+   "status": "proberen",
    "team": [
     {
      "cid": "c01",
@@ -776,11 +1631,11 @@
     },
     {
      "cid": "c13",
-     "role": "AoE A1, Turn Meter-reductie met A3"
+     "role": "AoE A1. A3: Turn Meter leegmaken volgens de bronnen (niet bevestigd voor dit account)"
     },
     {
      "cid": "c45",
-     "role": "AoE-debuffs + SPD-aura (leider)"
+     "role": "Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -788,29 +1643,44 @@
     },
     {
      "cid": "c05",
-     "role": "Turn Meter boost en -reductie"
+     "role": "AoE (A2), team-SPD, team-Turn Meter (A3)"
     }
    ],
-   "id": "spider"
+   "id": "spider",
+   "affinity": "Void: 1, 5, 9, 13, 17, 21. Magic: 2, 6, 10, 14, 18, 22, 25. Force: 3, 7, 11, 15, 19, 23. Spirit: 4, 8, 12, 16, 20, 24.",
+   "drops": "Accessoires: ring, amulet en banner. HellHades noemt Spider ook de beste silver-farm.",
+   "stages": "25 stages (Normal) plus Hard-modus (Tainted Skavag).",
+   "plan": [
+    "Ayumilove noemt Kael als starter voor AoE-schade op stage 1-14. Je kunt dus vroeg beginnen met Kael en het kernteam.",
+    "Bowyer pas levelen als Kael rank 6 is; tot dan zonder haar.",
+    "Op Spirit-stages (4, 8, 12 ...) heeft je Magic-Kael voordeel; Magic-stages zijn zwaar voor je Spirit-champions.",
+    "Ga een stage hoger zodra je de vorige op auto wint."
+   ],
+   "src": [
+    "ay-spider",
+    "hh-spider",
+    "hh-dungeons",
+    "ay-bowyer",
+    "hh-bowyer"
+   ]
   },
   {
    "mechanics": [
-    "Op 80%, 60%, 45%, 30% en 15% HP raakt hij je hele team en revivet hij zijn minions.",
-    "Die passieve negeert DEF per levende minion en kan je bevriezen.",
-    "Hij is immuun voor stun, freeze, sleep en provoke. Turn Meter-reductie werkt maar half.",
-    "Numbing Chill zet 50% Decrease ACC."
+    "Twee golven met minions voor de boss.",
+    "Frigid Vengeance: op 80%, 60%, 45%, 30% en 15% HP raakt hij je hele team en revivet hij zijn minions met volle HP. Per levende minion negeert hij 50% DEF en stijgt de kans op Freeze.",
+    "Numbing Chill: AoE met 50% Decrease ACC voor 2 beurten (cooldown 4).",
+    "Immuun voor Stun, Freeze, Sleep, Provoke, Block Active Skills, Fear en True Fear. Vanaf stage 21 werkt Turn Meter-reductie maar half."
    ],
    "name": "Ice Golem's Peak (Klyssus)",
    "needs": [
-    "Block Revive op de minions (je hebt er geen)",
-    "Heling, revive of ally protect",
-    "Controle op de minions",
-    "Decrease DEF",
-    "Poison"
+    "Block Revive op de minions (heb je niet)",
+    "Poison op de boss: triggert zijn passive niet",
+    "Heling of revive",
+    "Decrease DEF"
    ],
    "note": "Zonder Block Revive worden lage stages al traag. Bewaar dit tot je een Block Revive-champion hebt.",
    "order": 5,
-   "purpose": "Vraagt Block Revive, en dat heb je nog niet.",
+   "purpose": "Unieke sets, maar vraagt Block Revive, en dat heb je nog niet.",
    "short": "Ice Golem",
    "status": "later",
    "team": [
@@ -824,7 +1694,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c04",
@@ -835,21 +1705,31 @@
      "role": "Turn Meter voor het team"
     }
    ],
-   "id": "golem"
+   "id": "golem",
+   "affinity": "Spirit: 1, 5, 9, 13, 17, 20, 24. Magic: 2, 6, 10, 14, 18, 21, 25. Force: 3, 7, 11, 15, 19, 23. Void: 4, 8, 12, 16, 22.",
+   "drops": "Volgens Ayumilove farmbaar: Life, Offense, Defense, Critical Rate, Resistance, Retaliation, Reflex, Cursed, Taunting.",
+   "stages": "25 stages (Normal) plus Hard-modus (Tainted Klyssus).",
+   "plan": [
+    "Wacht tot je een Block Revive-champion hebt.",
+    "Probeer intussen alleen lage stages; Kaels poison is hier nuttig omdat poison zijn passive niet triggert."
+   ],
+   "src": [
+    "ay-golem"
+   ]
   },
   {
    "mechanics": [
-    "Zijn schild vermindert inkomende schade met 80%.",
-    "Hits nodig om het schild te breken: 5 tot stage 6, 7 op stage 7-9, 10 vanaf stage 10.",
-    "Hij heelt zichzelf en heeft een zware AoE."
+    "Divine Shield absorbeert 80% van de schade en blokkeert debuffs. Begint hij een beurt met het schild, dan raakt hij je hele team.",
+    "Hits nodig om het schild te breken: 5 op stage 1-6, 7 op 7-9, 10 op 10-20, 12 op 21-25.",
+    "Searing Storm verlaagt je max-HP; Dazzling Flames zet 30% Decrease SPD voor 3 beurten.",
+    "Immuun voor Stun, Freeze, Sleep, Provoke, Block Active/Passive, Fear en True Fear."
    ],
    "name": "Fire Knight's Castle (Fyro)",
    "needs": [
-    "Multi-hit A1's om het schild te breken",
+    "Multi-hit skills om het schild te breken (Kael A3: 4 hits, Yeoman A1: 3 hits)",
     "Turn Meter-reductie",
     "Decrease DEF",
-    "Heal Reduction",
-    "Controle om je zwakke champions te beschermen"
+    "Heling"
    ],
    "note": "Dit team is een schets, geen werkend team. Wacht tot je echte multi-hit- en Turn Meter-champions hebt.",
    "order": 6,
@@ -859,7 +1739,7 @@
    "team": [
     {
      "cid": "c13",
-     "role": "Turn Meter-reductie met A3"
+     "role": "AoE A1. A3-Turn Meter volgens de bronnen (niet bevestigd voor dit account)"
     },
     {
      "cid": "c20",
@@ -867,7 +1747,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -875,37 +1755,49 @@
     },
     {
      "cid": "c01",
-     "role": "Schade"
+     "role": "A3 met 4 hits voor het schild + poison"
     }
    ],
-   "id": "fireknight"
+   "id": "fireknight",
+   "affinity": "Force: 1, 5, 9, 13, 17, 20, 24. Spirit: 2, 6, 10, 14, 18, 21, 25. Magic: 3, 7, 11, 15, 19, 22. Void: 4, 8, 12, 16, 23.",
+   "drops": "Farmbaar volgens Ayumilove: Fury, Curing, Immunity, Shield, Critical Damage, Frenzy, Regeneration, Stun, Savage. HellHades noemt Savage als hoofdreden.",
+   "stages": "25 stages (Normal) plus Hard-modus (Tainted Fyro).",
+   "plan": [
+    "Niet nu. HellHades noemt dit de moeilijkste dungeon.",
+    "Stage 1-6 vraagt maar 5 hits: Kaels A3 (4 hits) plus één A1 breekt het schild. Een test op stage 1 is pas zinvol als Kael rank 6 is."
+   ],
+   "src": [
+    "ay-fk",
+    "hh-dungeons",
+    "hh-bowyer"
+   ]
   },
   {
    "group": "Clan bosses",
    "mechanics": [
-    "De eerste twee aanvallen raken je hele team. Hoe langer het gevecht duurt, hoe harder hij slaat.",
-    "Crushing Force stunt één champion voor 1 beurt.",
-    "Immuun voor stun, freeze, sleep en Decrease SPD. Poison doet minder schade, maar blijft je hoofdbron.",
-    "Maximaal 10 debuffs tegelijk op de boss."
+    "Twee AoE-aanvallen die schalen met zijn ATK; de tweede zet een debuff afhankelijk van zijn affiniteit (Void: poison, Force: Decrease ATK, Magic: Decrease ACC, Spirit: Decrease SPD).",
+    "Derde skill: zware hit op één champion die schaalt met diens HP en altijd stunt, tenzij die champion debuffs blokkeert.",
+    "Immuun voor Stun, Freeze, Sleep en Decrease SPD. Turn Meter-reductie werkt slechter.",
+    "Maximaal 10 debuffs op de boss. Wat erboven komt, landt niet."
    ],
    "name": "Clan Boss (Demon Lord)",
    "needs": [
-    "Decrease ATK (belangrijkste debuff, en die heb je nog niet)",
-    "Poison (Kael)",
-    "Weaken (Dorothy): erg sterk van Easy tot Brutal",
-    "Increase DEF of sterke heling",
-    "Speed voor extra beurten"
+    "Decrease ATK (belangrijkste debuff, heb je niet)",
+    "Poison (Kael) met genoeg Accuracy",
+    "Weaken (Dorothy A1) en Decrease DEF (Dorothy A2)",
+    "Heling",
+    "Speed"
    ],
-   "note": "Met 15 Accuracy landen Kaels poisons bijna nooit. Met de optimizer-build (137 ACC) haal je het doel voor Normal. Een Decrease ATK-champion is de eerste gap die je moet vullen: let daarop bij elke nieuwe Rare of Epic.",
+   "note": "Decrease ATK is de eerste gap. Defence boven 4.200 is volgens HellHades verspild, maar daar zit je nog ver vanaf.",
    "order": 10,
    "purpose": "Je dagelijkse bron van shards, Epic- en Legendary-boeken en Cruel/Immortal-gear. Een key per 6 uur, dus 4 gratis runs per dag.",
    "short": "Clan Boss",
    "status": "proberen",
    "targets": [
-    "Easy: ACC 70+, DEF 1.800+",
-    "Normal: ACC 100+, DEF 2.100+",
-    "Hard: ACC 150+, DEF 2.400+",
-    "Brutal: ACC 170+, DEF 2.700+"
+    "Easy: ACC 70+, DEF 1.800+, SPD 130+",
+    "Normal: ACC 100+, DEF 2.100+, SPD 140+",
+    "Hard: ACC 150+, DEF 2.400+, SPD 150+",
+    "Brutal: ACC 170+, DEF 2.700+, SPD 160+"
    ],
    "team": [
     {
@@ -914,7 +1806,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken, SPD-aura (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -929,22 +1821,35 @@
      "role": "Schade, A2 negeert 50% DEF"
     }
    ],
-   "id": "clanboss"
+   "id": "clanboss",
+   "affinity": "Volgens HellHades (pagina uit 2023) start hij op Void en wisselt hij na 50% HP naar Force, Magic of Spirit tot de reset. Kijk voor je run; de affiniteit bepaalt de debuff van zijn tweede AoE.",
+   "drops": "Shards, boeken, Cruel- en Immortal-gear, gems, potions en silver. Hogere moeilijkheid geeft meer.",
+   "stages": "Easy, Normal, Hard, Brutal, Nightmare, Ultra Nightmare. Keys vullen om de 6 uur bij.",
+   "plan": [
+    "Gebruik je keys elke dag, ook als de schade laag is.",
+    "Met 15 ACC landen Kaels poisons zelden. Met de optimizer-build (137 ACC) haal je het Normal-minimum (100), nog niet Hard (150).",
+    "Speel de hoogste moeilijkheid waarop je team blijft leven; HellHades raadt aan één niveau af te maken in plaats van meerdere aan te slaan.",
+    "Let bij elke nieuwe Rare of Epic op Decrease ATK."
+   ],
+   "src": [
+    "dwj-cb",
+    "hh-cb",
+    "hh-cb2"
+   ]
   },
   {
    "group": "Clan bosses",
    "mechanics": [
-    "Wisselt om de 5 beurten van vorm, met telkens de Ultimate-vorm ertussen.",
-    "Ultimate: krijgt minder schade per champion zonder buffs, dus houd buffs actief.",
-    "Ram: zet Duel op de champion met de laagste Crit Damage.",
-    "Lion: Hunter's Gaze op de champion met de hoogste DEF, en negeert shields en Block Damage.",
-    "Viper: elke dode champion geeft de overlevenden een stapel Necrosis (5% max HP per beurt)."
+    "65 beurten. Vormen in deze volgorde: Ultimate, Ram, Ultimate, Lion, Ultimate, Viper, Ultimate (twee keer), telkens 5 beurten.",
+    "Ram: Duel op de champion met de laagste Crit Damage; die krijgt 50% meer schade.",
+    "Lion: Hunter's Gaze op de champion met de hoogste DEF; shields, Unkillable en DEF-buffs helpen niet tegen die schade.",
+    "Viper: elke dode champion geeft de overlevenden een stapel Necrosis (5% max-HP per beurt)."
    ],
    "name": "Chimera",
    "needs": [
-    "Decrease DEF en Weaken (de waardevolste debuffs)",
-    "Altijd buffs actief (Increase ATK, DEF of SPD)",
-    "Heling of shields",
+    "Decrease DEF en Weaken",
+    "Buffs actief houden (Warpriest Increase ATK, Diabolist Increase SPD)",
+    "Heling",
     "Een tank met veel HP voor de Lion-fase"
    ],
    "note": "Controleer of je al accountlevel 33 bent. Gebruik Free Regroup om een team te testen zonder een Chimera-key te verspillen. Kies de moeilijkheid waarop je een schade-mijlpaal haalt, niet de hoogste die open staat.",
@@ -953,14 +1858,14 @@
    "short": "Chimera",
    "status": "later",
    "targets": [
-    "Accuracy: ongeveer boss-RES + 25",
-    "Resistance: ongeveer boss-ACC + 125 om debuffs te weerstaan",
+    "Accuracy: boss-RES + 25",
+    "Resistance: boss-ACC + 125 om debuffs te weerstaan",
     "Ontgrendeling: accountlevel 33 en lid van een clan"
    ],
    "team": [
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -979,7 +1884,18 @@
      "role": "Turn Meter voor het team"
     }
    ],
-   "id": "chimera"
+   "id": "chimera",
+   "affinity": "Roteert om de 28 dagen. Ram, Lion en Viper delen één affiniteit, Ultimate heeft een andere.",
+   "drops": "Kisten van Novice tot Ultimate op basis van de clanschade: o.a. Ocular Masses, Starstones, Clan Gold en soms champion-fragmenten.",
+   "stages": "Easy tot Ultra Nightmare. 2 keys per week, na de wekelijkse reset (donderdag op vrijdag UTC).",
+   "plan": [
+    "Controleer of je accountlevel 33 bent.",
+    "Test teams met Free Regroup; dat kost geen key.",
+    "Gebruik beide keys elke week: je schade telt mee voor de clan."
+   ],
+   "src": [
+    "ay-chimera"
+   ]
   },
   {
    "group": "Clan bosses",
@@ -1012,7 +1928,7 @@
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c01",
@@ -1027,13 +1943,24 @@
      "role": "Turn Meter"
     }
    ],
-   "id": "hydra"
+   "id": "hydra",
+   "affinity": "Elke kop heeft een eigen affiniteit die met de rotatie wisselt.",
+   "drops": "Niet uitgewerkt in de gebruikte bron.",
+   "stages": "Normal, Hard en hoger.",
+   "plan": [
+    "Niet nu. Ontgrendeld betekent niet klaar. Begin later op de laagste moeilijkheid en leer eerst de koppen."
+   ],
+   "src": [
+    "hh-hydra"
+   ]
   },
   {
    "group": "Overig",
    "mechanics": [
-    "Je klimt verdieping per verdieping. Om de zoveel verdiepingen wacht een boss.",
-    "Secret rooms leggen beperkingen op, zoals alleen Rares of één factie."
+    "Elke verdieping heeft 3 rondes vijanden; elke 10e verdieping is een boss.",
+    "Golden Keys voor nieuwe verdiepingen, Silver Keys voor secret rooms en herhaalde bosses. Een key wordt alleen bij winst verbruikt; max 10 per type, reset dagelijks om 00:00 UTC.",
+    "Secret rooms hebben een eis, bv. rarity, factie of type. Eerste clear: 2 Silver Keys en 3 champion-fragmenten (Epic op Normal).",
+    "De toren reset om de 30 dagen."
    ],
    "name": "Doom Tower",
    "needs": [
@@ -1052,11 +1979,11 @@
     },
     {
      "cid": "c04",
-     "role": "Schade + buff steal"
+     "role": "Schade + buff steal (A3)"
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken (leider)"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura (leider)"
     },
     {
      "cid": "c02",
@@ -1067,13 +1994,25 @@
      "role": "Turn Meter (Rare)"
     }
    ],
-   "id": "doomtower"
+   "id": "doomtower",
+   "affinity": "Verschilt per verdieping en boss.",
+   "drops": "Eenmalige beloningen per verdieping; bossets zoals Fatal (Magma Dragon), Untouchable (Scarab King), Lethal (Dark Fae).",
+   "stages": "Normal en Hard; 120 verdiepingen plus secret rooms.",
+   "plan": [
+    "Gebruik je Golden Keys elke dag op Normal tot je vastloopt.",
+    "Rare-only rooms: Kael, Warpriest, Diabolist en later Bowyer. HellHades noemt Bowyer sterk voor secret rooms."
+   ],
+   "src": [
+    "ay-doom",
+    "hh-bowyer"
+   ]
   },
   {
    "group": "Overig",
    "mechanics": [
-    "Wie het eerst aan de beurt komt, wint vaak. Speed is hier alles.",
-    "De verdediging van je tegenstander speelt automatisch."
+    "Teams van 4 champions. Je ziet de verdediging van je tegenstander vooraf.",
+    "Leagues: Bronze, Silver en Gold (elk tier I tot IV) en Platinum.",
+    "Je verdient medailles; hogere leagues geven meer per gevecht. Arena is de enige manier om de Great Hall te verbeteren."
    ],
    "name": "Classic Arena",
    "needs": [
@@ -1082,19 +2021,19 @@
     "Controle (stun)",
     "AoE-schade"
    ],
-   "note": "In Arena is Wukong de leider: zijn aura geeft 28% SPD tegenover 19% bij Dorothy. Overal anders is Dorothy de leider, want Wukongs aura werkt alleen in Arena. Val tegenstanders aan met een lagere teamsterkte dan de jouwe.",
+   "note": "Wukong A3 steelt alle buffs en zet Block Buffs; Dorothy A3 steelt buffs en kan stunnen.",
    "order": 21,
-   "purpose": "PvP met 4 champions. Je staat in league 4.",
+   "purpose": "PvP met 4 champions. League-code in de export: 4.",
    "short": "Arena",
    "status": "proberen",
    "team": [
     {
      "cid": "c04",
-     "role": "Leider: 28% SPD-aura (alleen Arena). Steelt alle buffs, stun op A1"
+     "role": "Leider: 28% SPD-aura (alleen Arena). A3 steelt buffs + Block Buffs, stun op A1"
     },
     {
      "cid": "c45",
-     "role": "Decrease DEF + Weaken, stun bij herrijzen"
+     "role": "Weaken (A1), Decrease DEF + ACC (A2), buff steal + stun (A3)"
     },
     {
      "cid": "c01",
@@ -1105,20 +2044,34 @@
      "role": "Turn Meter voor het team"
     }
    ],
-   "id": "arena"
+   "id": "arena",
+   "affinity": "Hangt af van de tegenstander.",
+   "drops": "Medailles voor de Great Hall (stat-bonussen per affiniteit).",
+   "stages": "Bronze I tot Platinum.",
+   "plan": [
+    "Wukong als leider: zijn 28% SPD-aura werkt alleen hier. Overal anders is Dorothy de leider.",
+    "Kies de makkelijkste verdedigingen.",
+    "Besteed medailles aan de Great Hall; nu staat Accuracy op niveau 1 voor Magic, Spirit en Force."
+   ],
+   "src": [
+    "hh-arena",
+    "ay-wukong",
+    "hh-opt"
+   ]
   },
   {
    "group": "Overig",
    "mechanics": [
-    "Per factie een eigen crypt met een eigen team.",
-    "Je hebt dus per factie meerdere bruikbare champions nodig."
+    "Per factie een crypt met 21 stages, in volgorde. Bosses op stage 7, 14 en 21.",
+    "Sterren: 1 voor een clear, 2 met minstens 3 champions en geen verliezen, 3 met 5 champions en geen verliezen.",
+    "Alleen champions van die factie zijn toegelaten."
    ],
    "name": "Faction Wars",
    "needs": [
     "Vijf champions van dezelfde factie",
     "Heling, Decrease DEF en AoE binnen die factie"
    ],
-   "note": "Barbarians is je diepste factie, maar dit team bestaat bijna volledig uit food. Investeer hier niet vóór Kael 6★. Als je Faction Wars later serieus wilt doen, moet je Barbarians uit je food-lijst halen. Beslis dat bewust.",
+   "note": "Shieldguard: de spelgegevens tonen een kans op Decrease SPD en een AoE die met DEF schaalt, maar geen debuff-removal.",
    "order": 22,
    "purpose": "Elke crypt laat alleen champions van één factie toe. Je hebt nu 1 ster.",
    "short": "Faction Wars",
@@ -1126,11 +2079,11 @@
    "team": [
     {
      "cid": "c13",
-     "role": "AoE + Turn Meter-reductie"
+     "role": "AoE A1. A3-Turn Meter volgens de bronnen (niet bevestigd)"
     },
     {
      "cid": "c23",
-     "role": "60% AoE Decrease DEF"
+     "role": "30% AoE Decrease DEF (75% kans)"
     },
     {
      "cid": "c28",
@@ -1138,14 +2091,725 @@
     },
     {
      "cid": "c27",
-     "role": "Vertraagt, verwijdert debuffs"
+     "role": "A1: kans op 15% Decrease SPD. A2: AoE die met DEF schaalt"
     },
     {
      "cid": "c15",
-     "role": "Tweede Decrease DEF"
+     "role": "Tweede 30% AoE Decrease DEF (75% kans)"
     }
    ],
-   "id": "factionwars"
+   "id": "factionwars",
+   "affinity": "Verschilt per stage.",
+   "drops": "Glyphs, forge-materiaal (o.a. Perception), eenmalige beloningen per sterrendrempel. Alle Normal-stages op 3 sterren: Lydia the Deathsiren.",
+   "stages": "21 stages per crypt; Hard-modus na Normal.",
+   "plan": [
+    "Barbarians is je diepste factie, maar het team bestaat bijna volledig uit food. Niet investeren voor Kael rank 6.",
+    "Wil je dit later doen, haal dan Barbarians bewust uit je food-lijst."
+   ],
+   "src": [
+    "ay-fw",
+    "hh-bowyer",
+    "hh-opt"
+   ]
   }
- ]
+ ],
+ "sources": [
+  {
+   "id": "hh-opt",
+   "title": "HellHades Optimizer: accountexport (api/Account + skill_types), uitgelezen 13 okt 2026",
+   "url": "https://raidoptimiser.hellhades.com/",
+   "supports": "Accountgegevens: roster, ranks, levels, skillniveaus, masteries, gear, Kaels huidige en voorgestelde stats, aura's (fixed-point), Engelse skillteksten uit de spelgegevens."
+  },
+  {
+   "id": "ay-kael",
+   "title": "Ayumilove: Kael skill, mastery & equip guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-kael-skill-mastery-equip-guide/",
+   "supports": "Kael: boekupgrades per skill, aanbevolen masteries, sets, hoofdstats per slot en stat-prioriteit."
+  },
+  {
+   "id": "ay-dorothy",
+   "title": "Ayumilove: Dorothy Gale skill, mastery & equip guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-dorothy-gale-skill-mastery-equip-guide/",
+   "supports": "Dorothy: passive (True Friend), Oz Unity-effecten, boekupgrades A1/A2, masteries, sets, stats."
+  },
+  {
+   "id": "ay-wukong",
+   "title": "Ayumilove: Sun Wukong skill, mastery & equip guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-sun-wukong-skill-mastery-equip-guide/",
+   "supports": "Sun Wukong: passive, boekupgrades, aura alleen in Arena, masteries, sets, stats."
+  },
+  {
+   "id": "ay-warpriest",
+   "title": "Ayumilove: Warpriest skill, mastery & equip guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-warpriest-skill-mastery-equip-guide/",
+   "supports": "Warpriest: boekupgrades, volledige A2-tekst, masteries, sets, stats."
+  },
+  {
+   "id": "ay-diabolist",
+   "title": "Ayumilove: Diabolist skill, mastery & equip guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-diabolist-skill-mastery-equip-guide/",
+   "supports": "Diabolist: boekupgrades, volledige A3-tekst (ook Turn Meter-reductie bij vijanden), masteries, sets, stats."
+  },
+  {
+   "id": "ay-bowyer",
+   "title": "Ayumilove: Soulbond Bowyer skill, mastery & equip guide (bijgewerkt 16 sep 2026)",
+   "url": "https://ayumilove.net/raid-shadow-legends-soulbond-bowyer-skill-mastery-equip-guide/",
+   "supports": "Soulbond Bowyer: A3 met 75% kans om de Turn Meter volledig leeg te maken, boekupgrades (o.a. Buff/Debuff Chance op A3), masteries, sets, stats."
+  },
+  {
+   "id": "hh-bowyer",
+   "title": "HellHades: Soulbond Bowyer",
+   "url": "https://hellhades.com/raid/champions/soulbond-bowyer/",
+   "supports": "Bowyer: A3 maakt de Turn Meter leeg; sterk in Spider, Fire Knight en Faction Wars; AoE A1; nuttig in Doom Tower secret rooms."
+  },
+  {
+   "id": "hh-diabolist",
+   "title": "HellHades: Diabolist",
+   "url": "https://hellhades.com/raid/champions/diabolist/",
+   "supports": "Diabolist: Turn Meter-controle en speed-support, early-to-mid game."
+  },
+  {
+   "id": "hh-warpriest",
+   "title": "HellHades: Warpriest",
+   "url": "https://hellhades.com/raid/champions/warpriest/",
+   "supports": "Warpriest: heling die beter wordt na ascension, ATK-buff, weinig waarde na level 50."
+  },
+  {
+   "id": "ay-artifacts",
+   "title": "Ayumilove: Artifact and Accessory Guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-artifact-and-accessory-guide/",
+   "supports": "Setbonussen (Life, Offense, Speed, Critical Rate, Lifesteal, Frost, Perception, Immortal ...) en mogelijke hoofdstats per slot."
+  },
+  {
+   "id": "raidextractor",
+   "title": "RaidExtractor (GitHub): ArtifactSetKindId.cs",
+   "url": "https://github.com/LukeCroteau/RaidExtractor/blob/master/RaidExtractor.Core/Native/ArtifactSetKindId.cs",
+   "supports": "Interne set-id's van het spel: 1 Hp, 2 AttackPower, 4 AttackSpeed, 5 CriticalChance, 9 LifeDrain, 13 FreezeRateOnDamageReceived, 24 Counterattack, 30 HpAndHeal, 38 AccuracyAndSpeed."
+  },
+  {
+   "id": "hh-affinity",
+   "title": "HellHades: Guide to Affinity",
+   "url": "https://hellhades.com/guide-to-affinity-raid-shadow-legends/",
+   "supports": "Affiniteitsdriehoek, strong en weak hits, Void."
+  },
+  {
+   "id": "hh-affinity2",
+   "title": "HellHades: What are affinities",
+   "url": "https://hellhades.com/what-are-affinities-in-raid-shadow-legends/",
+   "supports": "Weak hit: 30% minder schade en debuffs landen niet; strong hit: 30% meer schade."
+  },
+  {
+   "id": "ay-dragon",
+   "title": "Ayumilove: Dragon's Lair guide & champion ranking",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-ranking-in-dragons-lair/",
+   "supports": "Hellrazor: 25 stages, affiniteit per stage, skills, immuniteiten, farmbare sets."
+  },
+  {
+   "id": "ay-spider",
+   "title": "Ayumilove: Spider's Den guide & champion ranking",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-ranking-in-spiders-den/",
+   "supports": "Skavag: 25 stages, affiniteit per stage, skills, immuniteiten, spiderlings, accessoires, Kael als starter voor stage 1-14."
+  },
+  {
+   "id": "ay-golem",
+   "title": "Ayumilove: Ice Golem's Peak guide & champion ranking",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-ranking-in-ice-golems-peak/",
+   "supports": "Klyssus: 25 stages, affiniteit per stage, passive Frigid Vengeance, immuniteiten, farmbare sets, tips."
+  },
+  {
+   "id": "ay-fk",
+   "title": "Ayumilove: Fire Knight's Castle guide & champion ranking",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-ranking-in-fire-knights-castle/",
+   "supports": "Fyro: 25 stages, schild-hits per stage, affiniteit per stage, skills, immuniteiten, farmbare sets."
+  },
+  {
+   "id": "ay-mino",
+   "title": "Ayumilove: Minotaur's Labyrinth guide & champion ranking",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-ranking-in-minotaurs-labyrinth/",
+   "supports": "Minotaur: affiniteit per stage, Rage/Dazed-cyclus, Hex, immuniteiten, scrolls."
+  },
+  {
+   "id": "hh-dungeons",
+   "title": "HellHades: Dungeon Guides (overzicht)",
+   "url": "https://hellhades.com/raid/dungeon-guides/",
+   "supports": "Moeilijkheid en hoofdbeloning per dungeon (Dragon: Speed-set; Spider: accessoires; Minotaur: scrolls; Fire Knight: Savage)."
+  },
+  {
+   "id": "hh-mino",
+   "title": "HellHades: Minotaur boss guide",
+   "url": "https://hellhades.com/raid/boss-guide/minotaur/",
+   "supports": "Minotaur heeft 15 stages; scrolls kun je ook met gems kopen."
+  },
+  {
+   "id": "hh-spider",
+   "title": "HellHades: Skavag the Spider Queen",
+   "url": "https://hellhades.com/raid/boss-guide/skavag-the-spider-queen/",
+   "supports": "Spider: geen golven voor de boss, hoofdbron van accessoires en de beste silver-farm."
+  },
+  {
+   "id": "hh-dragon",
+   "title": "HellHades: Hellrazor the Dragon",
+   "url": "https://hellhades.com/raid/boss-guide/hellrazor-the-dragon/",
+   "supports": "Dragon is een van de eerste dungeons om op te focussen; levert vroege sets en de Speed-set."
+  },
+  {
+   "id": "hh-ascension",
+   "title": "HellHades: Guide to Champion Ascension",
+   "url": "https://hellhades.com/raid/guide-to-champion-ascension/",
+   "supports": "Ascension: max 6, niet hoger dan de rank, Arcane + affiniteitspotions, schema van de keeps, potions per stap voor Rare en Legendary."
+  },
+  {
+   "id": "hh-magic-keep",
+   "title": "HellHades: Magic Potion Keep",
+   "url": "https://hellhades.com/raid/boss-guide/magic-potion-keep/",
+   "supports": "Magic Keep open op woensdag en zaterdag; levert Magic-potions."
+  },
+  {
+   "id": "hh-arcane-keep",
+   "title": "HellHades: Arcane Potion Keep",
+   "url": "https://hellhades.com/raid/boss-guide/arcane-potion-keep/",
+   "supports": "Arcane Keep elke dag open; levert Arcane-potions."
+  },
+  {
+   "id": "hh-spirit-keep",
+   "title": "HellHades: Spirit Potion Keep",
+   "url": "https://hellhades.com/raid/boss-guide/spirit-potion-keep/",
+   "supports": "Spirit Keep open op maandag en donderdag; levert Spirit-potions."
+  },
+  {
+   "id": "hh-cb",
+   "title": "HellHades: Guide to Clan Boss",
+   "url": "https://hellhades.com/hellhades-guide-to-clan-boss/",
+   "supports": "Demon Lord: moeilijkheden, skills, max 10 debuffs, keys om de 6 uur, Decrease ATK als belangrijkste debuff."
+  },
+  {
+   "id": "hh-cb2",
+   "title": "HellHades: How to beat the Clan Boss (2021)",
+   "url": "https://hellhades.com/?p=23328",
+   "supports": "Demon Lord immuun voor Stun, Freeze, Sleep en Decrease SPD; Turn Meter-reductie verzwakt; max 10 debuffs."
+  },
+  {
+   "id": "dwj-cb",
+   "title": "DeadwoodJedi: Clan Boss, it's easy if you know how",
+   "url": "https://deadwoodjedi.com/clan-boss-its-easy-if-you-know-how/",
+   "supports": "Minimale ACC/DEF/SPD per moeilijkheid; tweede AoE-debuff per affiniteit; beloningstypes."
+  },
+  {
+   "id": "ay-chimera",
+   "title": "Ayumilove: Chimera Clan Boss Guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-chimera-clan-boss-guide/",
+   "supports": "Chimera: level 33 + clan, 65 beurten, vormen, 2 keys per week, ACC/RES-vuistregels, beloningen."
+  },
+  {
+   "id": "hh-hydra",
+   "title": "HellHades: Getting started with Hydra",
+   "url": "https://hellhades.com/getting-started-with-hydra-clan-boss-in-raid-shadow-legends/",
+   "supports": "Hydra: zes koppen, Normal-voorbeeld (SPD 211, ACC 215, RES 355), ontgrendelt te vroeg."
+  },
+  {
+   "id": "ay-doom",
+   "title": "Ayumilove: Doom Tower Guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-doom-tower-guide/",
+   "supports": "Doom Tower: verdiepingen, bossverdiepingen om de 10, keys, secret rooms en fragmenten."
+  },
+  {
+   "id": "ay-fw",
+   "title": "Ayumilove: Faction Wars Guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-ranking-in-faction-wars/",
+   "supports": "Faction Wars: 21 stages per crypt, bosses op 7/14/21, sterrenregels, beloningen."
+  },
+  {
+   "id": "hh-arena",
+   "title": "HellHades: Understanding the Arena",
+   "url": "https://hellhades.com/understanding-the-arena-and-the-benefits-it-can-bring/",
+   "supports": "Classic Arena: 4 champions, leagues Bronze/Silver/Gold (I-IV) en Platinum, medailles, Great Hall alleen via Arena."
+  },
+  {
+   "id": "hh-chicken",
+   "title": "HellHades: What is a chicken?",
+   "url": "https://hellhades.com/what-is-a-chicken/",
+   "supports": "Food/chickens en hoeveel champions van welke rank een rank-up kost."
+  },
+  {
+   "id": "ge-rankup",
+   "title": "GamerEmpire: How to upgrade and rank up champions",
+   "url": "https://gamerempire.net/how-to-upgrade-and-rank-up-champions-raid-shadow-legends/",
+   "supports": "Rank-up vraagt het maximumlevel van de huidige rank; maxlevel per rank (10/20/30/40/50/60)."
+  },
+  {
+   "id": "ay-masteries",
+   "title": "Ayumilove: Champion Masteries Guide",
+   "url": "https://ayumilove.net/raid-shadow-legends-champion-mastery-guide/",
+   "supports": "Masteries: 3 bomen, 2 actief, max 15; scrolltypes en aantallen; korte uitleg per mastery."
+  },
+  {
+   "id": "hh-masteries",
+   "title": "HellHades: Masteries, what are they",
+   "url": "https://hellhades.com/masteries-what-are-they-and-why-are-they-so-important/",
+   "supports": "Scrolls uit Minotaur; 100 basic, 600 advanced, 950 divine."
+  },
+  {
+   "id": "ay-buffs",
+   "title": "Ayumilove: List of Buffs and Debuffs",
+   "url": "https://ayumilove.net/raid-shadow-legends-buffs-debuffs-guide/",
+   "supports": "Waarden en werking van Poison, Weaken, Decrease/Increase-effecten, Stun, Freeze, Sleep, Sheep, Block Buffs, Block Revive, Heal Reduction, HP Burn, Hex, Provoke."
+  },
+  {
+   "id": "hh-digest",
+   "title": "HellHades: Buff/debuff rules en accuracy",
+   "url": "https://hellhades.com/raid-digest-buff-debuff-rules-relic-accuracy/",
+   "supports": "Het spel vergelijkt de Accuracy van de aanvaller met de Resistance van het doel."
+  },
+  {
+   "id": "hh-speed",
+   "title": "HellHades: How speed works",
+   "url": "https://hellhades.com/how-speed-works-in-raid-shadow-legends/",
+   "supports": "Turn Meter vult volgens Speed; op 100% krijgt de champion een beurt."
+  }
+ ],
+ "gear": {
+  "kaelNote": "Zoals gerapporteerd in de export van 13 okt 2026. Slotnamen en hoofdstats zijn uit interne codes vertaald en kunnen afwijken; vertrouw voor totalen op de stats uit de optimizer.",
+  "unequipped": [
+   {
+    "text": "Wapen 5★ Lifesteal (Set #9) +8: SPD 8, ATK 11%",
+    "set": 9
+   },
+   {
+    "text": "Wapen 4★ Set #5 +12: C.RATE 13%",
+    "set": 5
+   },
+   {
+    "text": "Wapen 4★ Set #2 +12: ACC 21, C.RATE 4%",
+    "set": 2
+   },
+   {
+    "text": "Schild 4★ Set #4 +12: RES 18, SPD 7",
+    "set": 4
+   },
+   {
+    "text": "Ring 5★ +8: HP 1638, HP 12%",
+    "set": null
+   },
+   {
+    "text": "Boots 4★ Speed, Set #13 +0 (de boots uit taak 2)",
+    "set": 13
+   }
+  ],
+  "unequippedTotal": "Totaal 69 ongebruikte stukken, meestal 3★ en 4★ op +0.",
+  "missing": [
+   "Geen Crit Rate-gloves op het account. Gloves zijn het enige slot waar C.RATE als hoofdstat kan; Kael zit op 29%.",
+   "Geen Speed-boots op Kael volgens de export. Boots zijn het enige slot met SPD als hoofdstat.",
+   "Geen Decrease ATK-champion: dat is geen gear, maar het grootste gat voor Clan Boss en Dragon."
+  ],
+  "missingSrc": [
+   "hh-opt",
+   "ay-artifacts"
+  ],
+  "sets": [
+   {
+    "id": 1,
+    "name": "Life",
+    "internal": "Hp",
+    "bonus": "2 stukken: +15% HP.",
+    "confirmed": true,
+    "src": [
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   },
+   {
+    "id": 2,
+    "name": "Offense",
+    "internal": "AttackPower",
+    "bonus": "2 stukken: +15% ATK.",
+    "confirmed": true,
+    "src": [
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   },
+   {
+    "id": 4,
+    "name": "Speed",
+    "internal": "AttackSpeed",
+    "bonus": "2 stukken: +12% SPD.",
+    "confirmed": true,
+    "src": [
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   },
+   {
+    "id": 5,
+    "name": "Critical Rate",
+    "internal": "CriticalChance",
+    "bonus": "2 stukken: +12% C.RATE.",
+    "confirmed": true,
+    "src": [
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   },
+   {
+    "id": 9,
+    "name": "Lifesteal",
+    "internal": "LifeDrain",
+    "bonus": "4 stukken: heelt voor 30% van de toegebrachte schade.",
+    "confirmed": true,
+    "src": [
+     "hh-opt",
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   },
+   {
+    "id": 13,
+    "name": "Frost",
+    "internal": "FreezeRateOnDamageReceived",
+    "bonus": "4 stukken: 20% kans om een aanvaller 1 beurt te bevriezen.",
+    "confirmed": true,
+    "src": [
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   },
+   {
+    "id": 24,
+    "name": null,
+    "internal": "Counterattack",
+    "bonus": "Interne naam wijst op een counterattack-set; welke set (bv. Retaliation of Avenging) is niet bevestigd.",
+    "confirmed": false,
+    "src": [
+     "raidextractor"
+    ]
+   },
+   {
+    "id": 30,
+    "name": null,
+    "internal": "HpAndHeal",
+    "bonus": "Interne naam wijst op HP + heling (past bij Immortal), maar dat is niet bevestigd.",
+    "confirmed": false,
+    "src": [
+     "raidextractor"
+    ]
+   },
+   {
+    "id": 38,
+    "name": "Perception",
+    "internal": "AccuracyAndSpeed",
+    "bonus": "2 stukken: +40 ACC en +5% SPD. Enige set met ACC en SPD samen.",
+    "confirmed": true,
+    "src": [
+     "raidextractor",
+     "ay-artifacts"
+    ]
+   }
+  ],
+  "setsNote": "Set-id's zijn gekoppeld via de interne enum van het spel (RaidExtractor, 2021) en de setbeschrijvingen van Ayumilove. Waar die twee niet eenduidig één set aanwijzen, staat 'Set #id'.",
+  "mainStats": [
+   {
+    "slot": "Wapen",
+    "stats": "ATK"
+   },
+   {
+    "slot": "Helm",
+    "stats": "HP"
+   },
+   {
+    "slot": "Schild",
+    "stats": "DEF"
+   },
+   {
+    "slot": "Gloves",
+    "stats": "HP, HP%, ATK, ATK%, DEF, DEF%, C.RATE, C.DMG"
+   },
+   {
+    "slot": "Chest",
+    "stats": "HP, HP%, ATK, ATK%, DEF, DEF%, ACC, RES"
+   },
+   {
+    "slot": "Boots",
+    "stats": "HP, HP%, ATK, ATK%, DEF, DEF%, SPD"
+   }
+  ],
+  "mainStatsSrc": [
+   "ay-artifacts"
+  ]
+ },
+ "guide": {
+  "terms": [
+   {
+    "term": "Poison",
+    "kind": "debuff",
+    "nl": "Schade aan het begin van de beurt van het doel: 2,5% of 5% van zijn max-HP. Schaalt alleen met de HP van het doel, dus sterk tegen bosses.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Weaken",
+    "kind": "debuff",
+    "nl": "Het doel neemt 15% of 25% meer schade.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Decrease DEF",
+    "kind": "debuff",
+    "nl": "Verlaagt de DEF van het doel met 30% of 60%.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Decrease ACC",
+    "kind": "debuff",
+    "nl": "Verlaagt de Accuracy van het doel met 25% of 50%: zijn debuffs landen minder.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Decrease SPD",
+    "kind": "debuff",
+    "nl": "Verlaagt de Speed van het doel met 15% of 30%.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Decrease ATK",
+    "kind": "debuff",
+    "nl": "Verlaagt de ATK van het doel met 25% of 50%. Belangrijk tegen bosses die met ATK schalen.",
+    "src": [
+     "ay-buffs",
+     "hh-cb"
+    ]
+   },
+   {
+    "term": "Stun",
+    "kind": "debuff",
+    "nl": "Het doel slaat zijn beurten over; cooldowns lopen niet verder.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Freeze",
+    "kind": "debuff",
+    "nl": "Zoals Stun: het doel slaat zijn beurten over en cooldowns lopen niet verder.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Sleep",
+    "kind": "debuff",
+    "nl": "Zoals Stun, maar elke schade maakt het doel wakker.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Sheep",
+    "kind": "debuff",
+    "nl": "Het doel kan alleen nog de schaap-aanval gebruiken. Na afloop komt de champion terug met 50% HP.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Block Buffs",
+    "kind": "debuff",
+    "nl": "Nieuwe buffs op het doel worden geblokkeerd.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Block Revive",
+    "kind": "debuff",
+    "nl": "Het doel kan niet herrijzen. Nodig tegen de minions van Ice Golem.",
+    "src": [
+     "ay-buffs",
+     "ay-golem"
+    ]
+   },
+   {
+    "term": "Heal Reduction",
+    "kind": "debuff",
+    "nl": "Het doel krijgt 50% of 100% minder heling.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "HP Burn",
+    "kind": "debuff",
+    "nl": "Aan het begin van de beurt van het doel nemen het doel en zijn bondgenoten 3% van hun eigen max-HP als schade. Maximaal één per doel.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Hex",
+    "kind": "debuff",
+    "nl": "Wie Hex heeft, deelt in de schade van zijn bondgenoten. De Minotaur doet dubbele schade op Hex-doelen.",
+    "src": [
+     "ay-buffs",
+     "ay-mino"
+    ]
+   },
+   {
+    "term": "Provoke",
+    "kind": "debuff",
+    "nl": "Het doel kan alleen nog met zijn A1 aanvallen, en alleen op wie Provoke zette.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Increase ATK",
+    "kind": "buff",
+    "nl": "Verhoogt de ATK met 25% of 50%.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Increase SPD",
+    "kind": "buff",
+    "nl": "Verhoogt de Speed met 15% of 30%.",
+    "src": [
+     "ay-buffs"
+    ]
+   },
+   {
+    "term": "Buff steal",
+    "kind": "effect",
+    "nl": "De champion neemt de buffs van de vijand over. Wukong A3 en Dorothy A3 doen dit bij alle vijanden.",
+    "src": [
+     "hh-opt"
+    ]
+   },
+   {
+    "term": "Buff Spread",
+    "kind": "effect",
+    "nl": "De buffs van de champion worden naar alle bondgenoten gekopieerd. Dorothy doet dit na haar buff steal.",
+    "src": [
+     "hh-opt"
+    ]
+   },
+   {
+    "term": "Turn Meter",
+    "kind": "mechaniek",
+    "nl": "Elke champion heeft een meter die volloopt volgens zijn Speed. Op 100% krijgt hij een beurt. Skills kunnen de meter vullen, verlagen of leegmaken.",
+    "src": [
+     "hh-speed"
+    ]
+   },
+   {
+    "term": "Accuracy en Resistance",
+    "kind": "mechaniek",
+    "nl": "Bij elke debuff vergelijkt het spel de Accuracy van de aanvaller met de Resistance van het doel. Hoe hoger de ACC tegenover de RES, hoe vaker de debuff landt. Vuistregel bij de Chimera: ACC = boss-RES + 25.",
+    "src": [
+     "hh-digest",
+     "ay-chimera"
+    ]
+   },
+   {
+    "term": "Aura",
+    "kind": "mechaniek",
+    "nl": "Bonus van de leider (eerste plaats) voor het hele team, soms alleen in één gebied. Wukongs aura werkt alleen in Arena.",
+    "src": [
+     "hh-opt",
+     "ay-wukong"
+    ]
+   }
+  ],
+  "affinity": {
+   "triangle": [
+    {
+     "a": "Magic",
+     "beats": "Spirit"
+    },
+    {
+     "a": "Spirit",
+     "beats": "Force"
+    },
+    {
+     "a": "Force",
+     "beats": "Magic"
+    }
+   ],
+   "void": "Void is neutraal tegen alles. Dezelfde affiniteit tegen elkaar is ook neutraal.",
+   "effects": [
+    "Strong hit (voordeel): 30% meer schade en extra Crit Rate (+15%).",
+    "Weak hit (nadeel): 30% minder schade en je debuffs landen niet.",
+    "Op dit account: Kael is Magic, Dorothy, Wukong, Warpriest en Bowyer zijn Spirit. Tegen Magic-vijanden zit je kernteam dus in het nadeel."
+   ],
+   "src": [
+    "hh-affinity",
+    "hh-affinity2"
+   ]
+  },
+  "topics": [
+   {
+    "id": "rankup",
+    "title": "Rank-up",
+    "body": [
+     "Een champion moet eerst het maximumlevel van zijn rank halen: rank 1 tot L10, 2 tot L20, 3 tot L30, 4 tot L40, 5 tot L50, 6 tot L60.",
+     "Daarna offer je zoveel champions van dezelfde rank als zijn huidige rank: twee 2★ voor 3★, drie 3★ voor 4★, vier 4★ voor 5★, vijf 5★ voor 6★.",
+     "Na de rank-up begint hij opnieuw op level 1, met hogere basisstats.",
+     "Voor Kael (rank 5, L50): vijf 5★-champions. Hound Spawn, Siegebreaker en Warmaiden 5★ zijn klaar."
+    ],
+    "src": [
+     "ge-rankup",
+     "hh-chicken"
+    ]
+   },
+   {
+    "id": "ascension",
+    "title": "Ascension",
+    "body": [
+     "Maximaal 6 stappen, nooit hoger dan de huidige rank. Commons kunnen niet ascenden.",
+     "Elke stap kost Arcane-potions plus potions van de eigen affiniteit. Je doet het in de Tavern.",
+     "Ascension verhoogt HP, ATK en DEF (soms ook SPD, ACC of RES) en kan skills versterken. Daarom tonen sommige sites skilleffecten die op dit account nog niet zichtbaar zijn.",
+     "Totaal voor een Rare: 15 Greater + 10 Lesser affiniteit, 10 Greater + 5 Lesser Arcane. Voor een Legendary: 21 Superior affiniteit, 16 Superior + 5 Greater Arcane."
+    ],
+    "src": [
+     "hh-ascension"
+    ]
+   },
+   {
+    "id": "masteries",
+    "title": "Masteries",
+    "body": [
+     "Drie bomen (Offense, Defense, Support). Je kiest er twee en maximaal 15 masteries.",
+     "Je betaalt met scrolls: Basic (tot 100, eerste tiers), Advanced (tot 600) en Divine (tot 950). Scrolls komen uit de Minotaur.",
+     "De eerste reset is gratis, daarna kost een reset 150 gems.",
+     "Kael heeft er 14, Wukong 2, Dorothy 0."
+    ],
+    "src": [
+     "ay-masteries",
+     "hh-masteries",
+     "hh-opt"
+    ]
+   },
+   {
+    "id": "food",
+    "title": "Food",
+    "body": [
+     "Food (of 'chickens') zijn champions die je alleen levelt en ranket om ze op te offeren aan een kernchampion.",
+     "Echte chickens zijn zeldzame items uit events en quests; ze tellen als food van hun rank.",
+     "Food krijgt geen silver voor gear en geen boeken. Level food in de campagne naast je farmer.",
+     "Een 6★ kost vijf 5★, en elke 5★ kost vier 4★. Dat is veel levelwerk: daarom staat bijna je hele roster op food."
+    ],
+    "src": [
+     "hh-chicken"
+    ]
+   }
+  ]
+ }
 }
