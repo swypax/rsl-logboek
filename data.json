@@ -1,0 +1,1151 @@
+{
+ "meta": {
+  "arena": 4,
+  "campaign": {
+   "brutal": 0,
+   "hard": 87,
+   "nightmare": 0,
+   "normal": 252
+  },
+  "gearFixes": [
+   "Gloves zijn Crit Damage (42%), niet Crit Rate. Er staan geen Crit Rate-gloves op het account: gebruik de eerste goede die dropt, ook een Epic.",
+   "Chest is HP% (19%). De 6★ ATK%-chest (39%) op Skullsworn gaat naar Kael.",
+   "Geen Speed-boots: zet de ongebruikte 4★ Speed-boots op Kael en upgrade naar +8.",
+   "Laat 'Find Builds' in de HH Optimizer draaien: 69 stukken liggen ongebruikt."
+  ],
+  "kael": {
+   "acc": 15,
+   "atk": 1352,
+   "cd": 149,
+   "cr": 29,
+   "spd": 107
+  },
+  "missionTitle": "Opdracht 2: Kael naar 6★ en Kaels gear repareren",
+  "name": "Swypax ftp 26",
+  "report": "Kaels rank, Crit Rate en Speed, het level van Dorothy, en de hoogste stage op Hard/Brutal.",
+  "rules": [
+   {
+    "d": "XP en silver gaan naar Kael tot hij 6★ is. Hij is je farmer.",
+    "t": "Eerst Kael"
+   },
+   {
+    "d": "Commons, Uncommons en zwakke Rares krijgen geen silver, gear of boeken.",
+    "t": "Food"
+   },
+   {
+    "d": "Rare naar nuttige Rares (Kael is vol). Epic bewaren. Legendary eerst naar Dorothy (A2), daarna Sun Wukong.",
+    "t": "Tomes"
+   },
+   {
+    "d": "Koop geen shards met gems.",
+    "t": "Gems"
+   },
+   {
+    "d": "Haal sterke stukken van food-champions en geef ze aan de kern.",
+    "t": "Gear"
+   }
+  ],
+  "synced": "13 okt 2026"
+ },
+ "tasks": [
+  {
+   "done": true,
+   "order": 1,
+   "text": "Verplaats de 6★ ATK%-chest van Skullsworn naar Kael.",
+   "id": "t01"
+  },
+  {
+   "done": true,
+   "order": 2,
+   "text": "Zet de ongebruikte 4★ Speed-boots op Kael en upgrade ze naar +8.",
+   "id": "t02"
+  },
+  {
+   "done": false,
+   "order": 3,
+   "text": "Zoek Crit Rate-gloves en zet de eerste goede op Kael.",
+   "id": "t03"
+  },
+  {
+   "done": false,
+   "order": 4,
+   "text": "Laat 'Find Builds' voor Kael draaien in de HH Optimizer (Crit Rate eerst, Speed tweede).",
+   "id": "t04"
+  },
+  {
+   "done": false,
+   "order": 5,
+   "text": "Level Dorothy naar L50 door haar mee te nemen in je campagne-farmteam.",
+   "id": "t05"
+  },
+  {
+   "done": false,
+   "order": 6,
+   "text": "Breng twee 4★-champions naar 5★ (Berserker L34, Warmaiden L13, Berserker of Outlander). Per stuk: 4 food van 4★.",
+   "id": "t06"
+  },
+  {
+   "done": false,
+   "order": 7,
+   "text": "Kael naar 6★: offer Hound Spawn, Siegebreaker, Warmaiden (5★) en de twee nieuwe 5★'s.",
+   "id": "t07"
+  },
+  {
+   "done": false,
+   "order": 8,
+   "text": "Speel de Hard-campagne verder en start daarna Brutal.",
+   "id": "t08"
+  }
+ ],
+ "champions": [
+  {
+   "affinity": "Magic",
+   "detail": "Je farmer en poison-dealer voor Clan Boss en Dragon. Boeken zijn vol. Zijn zwakke punt is gear: 29% Crit Rate.",
+   "faction": "Dark Elves",
+   "grade": 5,
+   "level": 50,
+   "name": "Kael",
+   "next": "6★ via 5 food van 5★ (3 klaar). Gear repareren.",
+   "note": "Farmer, poison. Boeken 14/14, 14 masteries.",
+   "prio": 1,
+   "rarity": 3,
+   "role": "kern",
+   "id": "c01"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Sacred Order",
+   "grade": 3,
+   "level": 29,
+   "name": "Warpriest",
+   "note": "Healer + team-ATK-buff. Nuttig tot ongeveer L50.",
+   "rarity": 3,
+   "role": "bewaren",
+   "id": "c02"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Demonspawn",
+   "grade": 5,
+   "level": 1,
+   "name": "Hound Spawn",
+   "note": "5★-food, klaar voor Kael 6★.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c03"
+  },
+  {
+   "affinity": "Spirit",
+   "detail": "A1 kan stunnen, A2 negeert 50% DEF, A3 steelt buffs, en hij herrijst eenmalig. Sterk in Arena, Hydra en Doom Tower. Geen farmer.",
+   "faction": "Skinwalkers",
+   "grade": 5,
+   "level": 50,
+   "name": "Sun Wukong",
+   "next": "Wacht tot Kael en Dorothy 6★ zijn. Legendary tomes na Dorothy.",
+   "note": "Damage + controle. 0 boeken, 2 masteries.",
+   "prio": 3,
+   "rarity": 5,
+   "role": "kern",
+   "id": "c04"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Demonspawn",
+   "grade": 3,
+   "level": 18,
+   "name": "Diabolist",
+   "note": "Turn Meter-support, sterk in early-to-mid game. In opslag.",
+   "rarity": 3,
+   "role": "bewaren",
+   "id": "c05"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Lizardmen",
+   "grade": 3,
+   "level": 18,
+   "name": "Skullsworn",
+   "note": "Draagt een 6★ ATK%-chest: verplaatsen naar Kael.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c06"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Dark Elves",
+   "grade": 2,
+   "level": 1,
+   "name": "Magekiller",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c07"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Barbarians",
+   "grade": 3,
+   "level": 10,
+   "name": "Warmaiden",
+   "note": "Dorothy neemt Decrease DEF over.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c08"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Barbarians",
+   "grade": 3,
+   "level": 1,
+   "name": "Warmaiden",
+   "note": "",
+   "rarity": 3,
+   "role": "food",
+   "id": "c09"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Dark Elves",
+   "grade": 2,
+   "level": 1,
+   "name": "Ranger",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c10"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Ogryn Tribes",
+   "grade": 5,
+   "level": 1,
+   "name": "Siegebreaker",
+   "note": "5★-food, klaar voor Kael 6★.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c11"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 4,
+   "level": 1,
+   "name": "Outlander",
+   "note": "Kandidaat om naar 5★ te brengen.",
+   "rarity": 2,
+   "role": "food",
+   "id": "c12"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 3,
+   "level": 1,
+   "name": "Soulbond Bowyer",
+   "note": "AoE A1, Turn Meter-reductie. Voor Spider en Fire Knight later. In opslag.",
+   "rarity": 3,
+   "role": "bewaren",
+   "id": "c13"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 1,
+   "level": 10,
+   "name": "Bully",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c14"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Barbarians",
+   "grade": 5,
+   "level": 1,
+   "name": "Warmaiden",
+   "note": "5★-food, klaar voor Kael 6★.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c15"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Undead Hordes",
+   "grade": 2,
+   "level": 1,
+   "name": "Dhampir",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c16"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 2,
+   "level": 1,
+   "name": "Outrider",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c17"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Undead Hordes",
+   "grade": 1,
+   "level": 1,
+   "name": "Hellhound",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c18"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Sacred Order",
+   "grade": 2,
+   "level": 1,
+   "name": "Knecht",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c19"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Sacred Order",
+   "grade": 2,
+   "level": 1,
+   "name": "Yeoman",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c20"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 2,
+   "level": 1,
+   "name": "Outlander",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c21"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Undead Hordes",
+   "grade": 2,
+   "level": 1,
+   "name": "Deathknight",
+   "note": "Niet de Legendary Ultimate Deathknight.",
+   "rarity": 1,
+   "role": "food",
+   "id": "c22"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Barbarians",
+   "grade": 4,
+   "level": 13,
+   "name": "Warmaiden",
+   "note": "Kandidaat om naar 5★ te brengen.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c23"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Knights Revenant",
+   "grade": 2,
+   "level": 1,
+   "name": "Glenspear",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c24"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Barbarians",
+   "grade": 3,
+   "level": 1,
+   "name": "Warmaiden",
+   "note": "",
+   "rarity": 3,
+   "role": "food",
+   "id": "c25"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Ogryn Tribes",
+   "grade": 2,
+   "level": 1,
+   "name": "Frostskin",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c26"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 3,
+   "level": 30,
+   "name": "Shieldguard",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c27"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 4,
+   "level": 34,
+   "name": "Berserker",
+   "note": "Kandidaat om naar 5★ te brengen.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c28"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Sacred Order",
+   "grade": 2,
+   "level": 1,
+   "name": "Knecht",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c29"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 3,
+   "level": 1,
+   "name": "Shieldguard",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c30"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Dark Elves",
+   "grade": 3,
+   "level": 1,
+   "name": "Judge",
+   "note": "Pas laat nuttig (Rare-only secret rooms). In opslag.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c31"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Dark Elves",
+   "grade": 2,
+   "level": 1,
+   "name": "Magekiller",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c32"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Orcs",
+   "grade": 2,
+   "level": 1,
+   "name": "Suntribe",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c33"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Banner Lords",
+   "grade": 2,
+   "level": 1,
+   "name": "Swordsman",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c34"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 2,
+   "level": 1,
+   "name": "Bully",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c35"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Banner Lords",
+   "grade": 2,
+   "level": 1,
+   "name": "Axeman",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c36"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 2,
+   "level": 1,
+   "name": "Shieldguard",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c37"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Banner Lords",
+   "grade": 2,
+   "level": 1,
+   "name": "Swordsman",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c38"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Banner Lords",
+   "grade": 2,
+   "level": 1,
+   "name": "Axeman",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c39"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Sacred Order",
+   "grade": 2,
+   "level": 1,
+   "name": "Novitiate",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c40"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Barbarians",
+   "grade": 4,
+   "level": 1,
+   "name": "Berserker",
+   "note": "Kandidaat om naar 5★ te brengen.",
+   "rarity": 3,
+   "role": "food",
+   "id": "c41"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Sacred Order",
+   "grade": 2,
+   "level": 1,
+   "name": "Armiger",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c42"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Skinwalkers",
+   "grade": 2,
+   "level": 1,
+   "name": "Satyr",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c43"
+  },
+  {
+   "affinity": "Spirit",
+   "faction": "Sacred Order",
+   "grade": 1,
+   "level": 1,
+   "name": "Knecht",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c44"
+  },
+  {
+   "affinity": "Spirit",
+   "detail": "Gratis loyalty-Legendary. Haar A2 zet Decrease DEF en Weaken, haar aura geeft 19% SPD. Ze draagt al 6★ Speed-boots.",
+   "faction": "Banner Lords",
+   "grade": 5,
+   "level": 9,
+   "name": "Dorothy Gale",
+   "next": "Naar L50 in de campagne. Daarna Legendary tomes op A2 en 6★ na Kael.",
+   "note": "Support: Decrease DEF + Weaken, 19% SPD-aura.",
+   "prio": 2,
+   "rarity": 5,
+   "role": "kern",
+   "id": "c45"
+  },
+  {
+   "affinity": "Magic",
+   "faction": "Orcs",
+   "grade": 1,
+   "level": 1,
+   "name": "Warboy",
+   "note": "",
+   "rarity": 1,
+   "role": "food",
+   "id": "c46"
+  },
+  {
+   "affinity": "Force",
+   "faction": "Barbarians",
+   "grade": 2,
+   "level": 1,
+   "name": "Spiritwalker",
+   "note": "",
+   "rarity": 2,
+   "role": "food",
+   "id": "c47"
+  }
+ ],
+ "content": [
+  {
+   "mechanics": [
+    "Ruim eerst de minions op.",
+    "Hellrazor is immuun voor Speed-debuffs.",
+    "De boss heeft veel HP, dus poison werkt hier erg efficiënt."
+   ],
+   "name": "Dragon's Lair (Hellrazor)",
+   "needs": [
+    "Poison (Kael)",
+    "Decrease DEF",
+    "Decrease ATK of genoeg heling",
+    "Speed in het team"
+   ],
+   "note": "Begin op een lage stage en ga één stage hoger zodra je die op auto wint. Zolang Dorothy laag level is, sterft ze hier snel: level haar eerst in de campagne.",
+   "order": 1,
+   "purpose": "Je eerste gear-dungeon. Een goede plek om Lifesteal-gear te farmen.",
+   "short": "Dragon",
+   "status": "proberen",
+   "team": [
+    {
+     "cid": "c01",
+     "role": "Poison + AoE-schade"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken, 19% SPD-aura (leider)"
+    },
+    {
+     "cid": "c04",
+     "role": "Schade, kans op stun met A1"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling + team-ATK-buff"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter voor het team"
+    }
+   ],
+   "id": "dragon"
+  },
+  {
+   "mechanics": [
+    "Twee golven vijanden voor de Minotaur zelf.",
+    "Hij heeft een rage-buff die zwaar op je HP slaat.",
+    "Om de drie beurten is hij kwetsbaar: spaar je zwaarste aanvallen voor die beurt."
+   ],
+   "name": "Minotaur's Labyrinth",
+   "needs": [
+    "Controle (stun) voor de eerste golven",
+    "Burst-schade op de kwetsbare beurt",
+    "Heling"
+   ],
+   "note": "Max eerst lage stages uit. Scrolls zijn op dit moment je bottleneck voor nieuwe masteries.",
+   "order": 2,
+   "purpose": "Dropt mastery scrolls. Die heb je nodig voor de masteries van Sun Wukong en Dorothy.",
+   "short": "Minotaur",
+   "status": "proberen",
+   "team": [
+    {
+     "cid": "c01",
+     "role": "AoE voor de golven + poison"
+    },
+    {
+     "cid": "c04",
+     "role": "Stun op A1, zware single-target A2"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling + team-ATK-buff"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter voor het team"
+    }
+   ],
+   "id": "minotaur"
+  },
+  {
+   "mechanics": [
+    "Elke keep heeft de affiniteit van zijn naam. Arcane heeft geen affiniteit, dus geen voor- of nadeel.",
+    "Magic is sterk tegen Spirit: in de Magic Keep krijgen Spirit-champions (Dorothy, Wukong, Warpriest) harder klappen en raken ze zwakker."
+   ],
+   "name": "Potion Keeps (Arcane en Magic)",
+   "needs": [
+    "AoE voor de golven",
+    "Heling",
+    "In de Magic Keep: liefst Magic- of Force-champions"
+   ],
+   "note": "Doe eerst de Arcane Keep, want daar speelt affiniteit geen rol. Kaels ascension geeft hem extra stats zonder nieuwe gear.",
+   "order": 3,
+   "purpose": "Ascension-potions. Kael heeft Magic- en Arcane-potions nodig om te ascenden.",
+   "short": "Potion Keeps",
+   "status": "proberen",
+   "team": [
+    {
+     "cid": "c01",
+     "role": "AoE + poison (Magic, neutraal in de Magic Keep)"
+    },
+    {
+     "cid": "c04",
+     "role": "Schade + controle"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling + team-ATK-buff"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter (Magic, neutraal in de Magic Keep)"
+    }
+   ],
+   "id": "potions"
+  },
+  {
+   "mechanics": [
+    "Spiderlings vallen aan en zetten poison op je team.",
+    "De spin eet spiderlings op en heelt zichzelf.",
+    "Vanaf stage 15 heeft de spin een eigen heal.",
+    "HP Burn op spiderlings doet ook schade aan de spin."
+   ],
+   "name": "Spider's Den (Skavag)",
+   "needs": [
+    "Veel AoE-schade",
+    "Turn Meter-reductie op de spin",
+    "Speed",
+    "Heling of revives",
+    "AoE Decrease DEF"
+   ],
+   "note": "Level Soulbond Bowyer pas naar 50 als Kael 6★ is. HellHades noemt Shieldguard (vertraagt, verwijdert debuffs) als goedkope invaller.",
+   "order": 4,
+   "purpose": "Pas zinvol als Soulbond Bowyer geleveld is.",
+   "short": "Spider",
+   "status": "later",
+   "team": [
+    {
+     "cid": "c01",
+     "role": "AoE + poison"
+    },
+    {
+     "cid": "c13",
+     "role": "AoE A1, Turn Meter-reductie met A3"
+    },
+    {
+     "cid": "c45",
+     "role": "AoE-debuffs + SPD-aura (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter boost en -reductie"
+    }
+   ],
+   "id": "spider"
+  },
+  {
+   "mechanics": [
+    "Op 80%, 60%, 45%, 30% en 15% HP raakt hij je hele team en revivet hij zijn minions.",
+    "Die passieve negeert DEF per levende minion en kan je bevriezen.",
+    "Hij is immuun voor stun, freeze, sleep en provoke. Turn Meter-reductie werkt maar half.",
+    "Numbing Chill zet 50% Decrease ACC."
+   ],
+   "name": "Ice Golem's Peak (Klyssus)",
+   "needs": [
+    "Block Revive op de minions (je hebt er geen)",
+    "Heling, revive of ally protect",
+    "Controle op de minions",
+    "Decrease DEF",
+    "Poison"
+   ],
+   "note": "Zonder Block Revive worden lage stages al traag. Bewaar dit tot je een Block Revive-champion hebt.",
+   "order": 5,
+   "purpose": "Vraagt Block Revive, en dat heb je nog niet.",
+   "short": "Ice Golem",
+   "status": "later",
+   "team": [
+    {
+     "cid": "c01",
+     "role": "Poison"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c04",
+     "role": "Stun op minions, schade"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter voor het team"
+    }
+   ],
+   "id": "golem"
+  },
+  {
+   "mechanics": [
+    "Zijn schild vermindert inkomende schade met 80%.",
+    "Hits nodig om het schild te breken: 5 tot stage 6, 7 op stage 7-9, 10 vanaf stage 10.",
+    "Hij heelt zichzelf en heeft een zware AoE."
+   ],
+   "name": "Fire Knight's Castle (Fyro)",
+   "needs": [
+    "Multi-hit A1's om het schild te breken",
+    "Turn Meter-reductie",
+    "Decrease DEF",
+    "Heal Reduction",
+    "Controle om je zwakke champions te beschermen"
+   ],
+   "note": "Dit team is een schets, geen werkend team. Wacht tot je echte multi-hit- en Turn Meter-champions hebt.",
+   "order": 6,
+   "purpose": "Volgens HellHades de moeilijkste dungeon. Je roster mist er nog de middelen voor.",
+   "short": "Fire Knight",
+   "status": "niet",
+   "team": [
+    {
+     "cid": "c13",
+     "role": "Turn Meter-reductie met A3"
+    },
+    {
+     "cid": "c20",
+     "role": "A1 met 3 hits voor het schild"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling"
+    },
+    {
+     "cid": "c01",
+     "role": "Schade"
+    }
+   ],
+   "id": "fireknight"
+  },
+  {
+   "group": "Clan bosses",
+   "mechanics": [
+    "De eerste twee aanvallen raken je hele team. Hoe langer het gevecht duurt, hoe harder hij slaat.",
+    "Crushing Force stunt één champion voor 1 beurt.",
+    "Immuun voor stun, freeze, sleep en Decrease SPD. Poison doet minder schade, maar blijft je hoofdbron.",
+    "Maximaal 10 debuffs tegelijk op de boss."
+   ],
+   "name": "Clan Boss (Demon Lord)",
+   "needs": [
+    "Decrease ATK (belangrijkste debuff, en die heb je nog niet)",
+    "Poison (Kael)",
+    "Weaken (Dorothy): erg sterk van Easy tot Brutal",
+    "Increase DEF of sterke heling",
+    "Speed voor extra beurten"
+   ],
+   "note": "Met 15 Accuracy landen Kaels poisons bijna nooit. Met de optimizer-build (137 ACC) haal je het doel voor Normal. Een Decrease ATK-champion is de eerste gap die je moet vullen: let daarop bij elke nieuwe Rare of Epic.",
+   "order": 10,
+   "purpose": "Je dagelijkse bron van shards, Epic- en Legendary-boeken en Cruel/Immortal-gear. Een key per 6 uur, dus 4 gratis runs per dag.",
+   "short": "Clan Boss",
+   "status": "proberen",
+   "targets": [
+    "Easy: ACC 70+, DEF 1.800+",
+    "Normal: ACC 100+, DEF 2.100+",
+    "Hard: ACC 150+, DEF 2.400+",
+    "Brutal: ACC 170+, DEF 2.700+"
+   ],
+   "team": [
+    {
+     "cid": "c01",
+     "role": "Poison (heeft Accuracy nodig)"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken, SPD-aura (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling + team-ATK-buff"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter voor het team"
+    },
+    {
+     "cid": "c04",
+     "role": "Schade, A2 negeert 50% DEF"
+    }
+   ],
+   "id": "clanboss"
+  },
+  {
+   "group": "Clan bosses",
+   "mechanics": [
+    "Wisselt om de 5 beurten van vorm, met telkens de Ultimate-vorm ertussen.",
+    "Ultimate: krijgt minder schade per champion zonder buffs, dus houd buffs actief.",
+    "Ram: zet Duel op de champion met de laagste Crit Damage.",
+    "Lion: Hunter's Gaze op de champion met de hoogste DEF, en negeert shields en Block Damage.",
+    "Viper: elke dode champion geeft de overlevenden een stapel Necrosis (5% max HP per beurt)."
+   ],
+   "name": "Chimera",
+   "needs": [
+    "Decrease DEF en Weaken (de waardevolste debuffs)",
+    "Altijd buffs actief (Increase ATK, DEF of SPD)",
+    "Heling of shields",
+    "Een tank met veel HP voor de Lion-fase"
+   ],
+   "note": "Controleer of je al accountlevel 33 bent. Gebruik Free Regroup om een team te testen zonder een Chimera-key te verspillen. Kies de moeilijkheid waarop je een schade-mijlpaal haalt, niet de hoogste die open staat.",
+   "order": 11,
+   "purpose": "Clan boss met 65 beurten. De schade van alle clanleden telt samen. Je zit in clan C1C-NOVUS.",
+   "short": "Chimera",
+   "status": "later",
+   "targets": [
+    "Accuracy: ongeveer boss-RES + 25",
+    "Resistance: ongeveer boss-ACC + 125 om debuffs te weerstaan",
+    "Ontgrendeling: accountlevel 33 en lid van een clan"
+   ],
+   "team": [
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling + Increase ATK (buff-uptime)"
+    },
+    {
+     "cid": "c01",
+     "role": "Poison + AoE"
+    },
+    {
+     "cid": "c04",
+     "role": "Schade, overleeft één keer dankzij zijn passive"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter voor het team"
+    }
+   ],
+   "id": "chimera"
+  },
+  {
+   "group": "Clan bosses",
+   "mechanics": [
+    "Zes mogelijke koppen: Blight, Suffering, Wrath, Decay, Torment en Mischief.",
+    "Mischief steelt buffs. Decay vraagt provoke. Wrath slaat hard, dus Decrease ATK helpt.",
+    "Champions kunnen opgegeten worden. Je hebt schade nodig om ze terug te krijgen."
+   ],
+   "name": "Hydra",
+   "needs": [
+    "Speed boven de snelste kop",
+    "Decrease DEF, Weaken en een harde hitter",
+    "Provoke, Decrease ATK en Block Buffs als counters",
+    "Shields, revives en cleanses"
+   ],
+   "note": "Dit team is een schets. Wukong is volgens de bronnen sterk in Hydra, maar de stat-doelen liggen ver buiten je bereik. Kom terug als Kael en Dorothy 6★ zijn.",
+   "order": 12,
+   "purpose": "Ontgrendelt volgens HellHades veel te vroeg. Ontgrendeld betekent niet dat je account er klaar voor is.",
+   "short": "Hydra",
+   "status": "niet",
+   "targets": [
+    "Normal: SPD 211+",
+    "Normal: ACC ongeveer 215",
+    "Normal: één champion met RES ongeveer 355 tegen Mischief"
+   ],
+   "team": [
+    {
+     "cid": "c04",
+     "role": "Schade + buff steal"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c01",
+     "role": "Poison"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter"
+    }
+   ],
+   "id": "hydra"
+  },
+  {
+   "group": "Overig",
+   "mechanics": [
+    "Je klimt verdieping per verdieping. Om de zoveel verdiepingen wacht een boss.",
+    "Secret rooms leggen beperkingen op, zoals alleen Rares of één factie."
+   ],
+   "name": "Doom Tower",
+   "needs": [
+    "Een stabiel allround team voor de gewone verdiepingen",
+    "Sterke Rares voor de Rare-only kamers"
+   ],
+   "note": "Speel de Normal-verdiepingen tot je vastloopt. Voor Rare-only kamers heb je Kael, Warpriest, Diabolist en later Soulbond Bowyer.",
+   "order": 20,
+   "purpose": "Verdiepingen met bosses en secret rooms. Sommige secret rooms laten alleen Rares toe.",
+   "short": "Doom Tower",
+   "status": "proberen",
+   "team": [
+    {
+     "cid": "c01",
+     "role": "AoE + poison (ook voor Rare-only kamers)"
+    },
+    {
+     "cid": "c04",
+     "role": "Schade + buff steal"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken (leider)"
+    },
+    {
+     "cid": "c02",
+     "role": "Heling (Rare)"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter (Rare)"
+    }
+   ],
+   "id": "doomtower"
+  },
+  {
+   "group": "Overig",
+   "mechanics": [
+    "Wie het eerst aan de beurt komt, wint vaak. Speed is hier alles.",
+    "De verdediging van je tegenstander speelt automatisch."
+   ],
+   "name": "Classic Arena",
+   "needs": [
+    "Een leider met een SPD-aura voor Arena",
+    "Buff steal of buff strip",
+    "Controle (stun)",
+    "AoE-schade"
+   ],
+   "note": "In Arena is Wukong de leider: zijn aura geeft 28% SPD tegenover 19% bij Dorothy. Overal anders is Dorothy de leider, want Wukongs aura werkt alleen in Arena. Val tegenstanders aan met een lagere teamsterkte dan de jouwe.",
+   "order": 21,
+   "purpose": "PvP met 4 champions. Je staat in league 4.",
+   "short": "Arena",
+   "status": "proberen",
+   "team": [
+    {
+     "cid": "c04",
+     "role": "Leider: 28% SPD-aura (alleen Arena). Steelt alle buffs, stun op A1"
+    },
+    {
+     "cid": "c45",
+     "role": "Decrease DEF + Weaken, stun bij herrijzen"
+    },
+    {
+     "cid": "c01",
+     "role": "AoE-schade"
+    },
+    {
+     "cid": "c05",
+     "role": "Turn Meter voor het team"
+    }
+   ],
+   "id": "arena"
+  },
+  {
+   "group": "Overig",
+   "mechanics": [
+    "Per factie een eigen crypt met een eigen team.",
+    "Je hebt dus per factie meerdere bruikbare champions nodig."
+   ],
+   "name": "Faction Wars",
+   "needs": [
+    "Vijf champions van dezelfde factie",
+    "Heling, Decrease DEF en AoE binnen die factie"
+   ],
+   "note": "Barbarians is je diepste factie, maar dit team bestaat bijna volledig uit food. Investeer hier niet vóór Kael 6★. Als je Faction Wars later serieus wilt doen, moet je Barbarians uit je food-lijst halen. Beslis dat bewust.",
+   "order": 22,
+   "purpose": "Elke crypt laat alleen champions van één factie toe. Je hebt nu 1 ster.",
+   "short": "Faction Wars",
+   "status": "later",
+   "team": [
+    {
+     "cid": "c13",
+     "role": "AoE + Turn Meter-reductie"
+    },
+    {
+     "cid": "c23",
+     "role": "60% AoE Decrease DEF"
+    },
+    {
+     "cid": "c28",
+     "role": "Schade"
+    },
+    {
+     "cid": "c27",
+     "role": "Vertraagt, verwijdert debuffs"
+    },
+    {
+     "cid": "c15",
+     "role": "Tweede Decrease DEF"
+    }
+   ],
+   "id": "factionwars"
+  }
+ ]
+}

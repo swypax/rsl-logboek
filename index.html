@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Swypax Raid Account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: één kolom "logboek" — samenvatting bovenaan, daarna opdracht, Kael-meters, kern, volledig roster */
+:root{
+  --bg:#f3f4f7; --surface:#ffffff; --sunk:#e8eaf0; --line:#d5d9e2;
+  --fg:#1b1f2a; --muted:#5d6475; --accent:#8a5a12; --accent-soft:#f3e6cf;
+  --good:#2f7a4a; --warn:#a2620b; --bad:#b0372e;
+  --r-common:#7a7f8c; --r-uncommon:#3f8a3f; --r-rare:#2f6fc0; --r-epic:#8040b5; --r-legendary:#b07a12;
+  --f-display:"Alegreya SC", Georgia, serif;
+  --f-body:"Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12141b; --surface:#1a1d27; --sunk:#232735; --line:#2f3444;
+  --fg:#e7e9f0; --muted:#9aa1b4; --accent:#e0ad5a; --accent-soft:#3a2e1c;
+  --good:#5fbf80; --warn:#e3a646; --bad:#ec6b5f;
+  --r-common:#a3a8b5; --r-uncommon:#6cc46c; --r-rare:#5fa0f0; --r-epic:#b07ae6; --r-legendary:#e6b54a;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#12141b; --surface:#1a1d27; --sunk:#232735; --line:#2f3444;
+  --fg:#e7e9f0; --muted:#9aa1b4; --accent:#e0ad5a; --accent-soft:#3a2e1c;
+  --good:#5fbf80; --warn:#e3a646; --bad:#ec6b5f;
+  --r-common:#a3a8b5; --r-uncommon:#6cc46c; --r-rare:#5fa0f0; --r-epic:#b07ae6; --r-legendary:#e6b54a;
+  color-scheme:dark }
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.5}
+.wrap{max-width:960px;margin:0 auto;padding-inline:16px;padding-block:28px 64px;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:2.1rem;line-height:1.1}
+h2{font-size:1.45rem}
+h3{font-size:1.15rem}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+section{display:grid;gap:14px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
+.muted{color:var(--muted)}
+header{display:grid;gap:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.92rem}
+.camp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.camp div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:grid;gap:6px}
+.camp .lbl{font-size:.8rem;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.bar{height:6px;background:var(--sunk);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+/* tasks */
+.mission{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:16px;display:grid;gap:12px}
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.tasks label{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;padding:7px 6px;border-radius:6px;cursor:pointer}
+.tasks label:hover{background:var(--sunk)}
+.tasks input{width:18px;height:18px;margin-top:3px;accent-color:var(--accent)}
+.tasks input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tasks .done span{color:var(--muted);text-decoration:line-through}
+.report{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+/* meters */
+.meters{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.meter{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px;display:grid;gap:6px}
+.meter .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.meter .val{font-size:1.5rem;font-weight:600}
+.meter .tgt{font-size:.85rem;color:var(--muted)}
+.meter.low .val{color:var(--bad)} .meter.low .bar i{background:var(--bad)}
+.meter.mid .val{color:var(--warn)} .meter.mid .bar i{background:var(--warn)}
+.meter.ok .val{color:var(--good)} .meter.ok .bar i{background:var(--good)}
+.fixes{margin:0;padding-left:20px;display:grid;gap:4px}
+/* core cards */
+.cores{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.core{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--rc);border-radius:8px;padding:14px;display:grid;gap:8px;align-content:start}
+.core .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.prio{font-family:var(--f-mono);font-size:.8rem;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:99px;white-space:nowrap}
+.stars{color:var(--accent);letter-spacing:1px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem}
+.tag{border:1px solid var(--line);border-radius:99px;padding:1px 8px;color:var(--muted)}
+/* roster */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;font-size:.9rem;background:var(--surface);color:var(--fg);border:0;padding:6px 12px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--bg);font-weight:700}
+.seg button:focus-visible,.filters input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.filters input{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);min-width:0;flex:1 1 160px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:620px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--sunk);cursor:pointer;user-select:none;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.rdot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--rc);margin-right:6px;vertical-align:1px}
+.role{font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.role.kern{background:var(--accent-soft);color:var(--accent)}
+.role.bewaren{border:1px solid var(--good);color:var(--good)}
+.role.food{border:1px solid var(--line);color:var(--muted)}
+.note{color:var(--muted);font-size:.86rem}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.rules div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px}
+.empty{padding:18px;text-align:center;color:var(--muted)}
+.status{font-size:.85rem;color:var(--muted)}
+.status.err{color:var(--bad)}
+/* dungeons */
+.dgroups{display:grid;gap:10px}
+.dgroup{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start}
+.dgroup .eyebrow{padding-top:8px}
+@media (max-width:520px){.dgroup{grid-template-columns:1fr;gap:4px}.dgroup .eyebrow{padding-top:0}}
+.dtabs{display:flex;flex-wrap:wrap;gap:6px}
+.dtab{font:inherit;font-size:.9rem;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--fg);cursor:pointer}
+.dtab[aria-selected="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:700}
+.dtab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sdot{width:8px;height:8px;border-radius:50%;background:var(--sc);flex:none}
+.st-farm{--sc:var(--good)} .st-proberen{--sc:var(--warn)} .st-later{--sc:var(--muted)} .st-niet{--sc:var(--bad)}
+.dpanel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:16px}
+.dhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
+.spill{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid var(--sc);color:var(--sc)}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.dgrid > div{min-width:0;display:grid;gap:6px;align-content:start}
+.dgrid ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.team{display:grid;gap:6px}
+.slot{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.slot .n{font-family:var(--f-mono);color:var(--muted);font-size:.85rem}
+.slot .who b{display:block}
+.slot .who span{font-size:.85rem;color:var(--muted)}
+.ready{font-size:.78rem;font-weight:700;white-space:nowrap;color:var(--sc)}
+.r-ok{--sc:var(--good)} .r-low{--sc:var(--warn)} .r-miss{--sc:var(--bad)}
+.dnote{font-size:.92rem;border-top:1px dashed var(--line);padding-top:10px;color:var(--muted)}
+footer{font-size:.85rem;color:var(--muted);display:grid;gap:4px}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:width .6s ease}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Raid: Shadow Legends · accountlogboek</div>
+    <h1 id="acc-name">Swypax</h1>
+    <div class="meta">
+      <span>Laatste sync: <b id="synced" class="num">–</b></span>
+      <span>Champions: <b id="count" class="num">–</b></span>
+      <span>Arena-league: <b id="arena" class="num">–</b></span>
+      <span id="status" class="status" role="status">Gegevens laden…</span>
+    </div>
+    <div class="camp" id="camp"></div>
+  </header>
+
+  <section aria-labelledby="h-mission">
+    <div class="sec-head">
+      <h2 id="h-mission">Actieve opdracht</h2>
+      <span class="num muted" id="task-progress"></span>
+    </div>
+    <div class="mission">
+      <h3 id="mission-title">–</h3>
+      <ul class="tasks" id="tasks"><li class="empty">De takenlijst verschijnt hier zodra de gegevens geladen zijn.</li></ul>
+      <div class="report" id="report"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-kael">
+    <div class="sec-head">
+      <h2 id="h-kael">Kael: stats tegenover doel</h2>
+      <span class="muted">Acid Rain (A2) crit pas betrouwbaar bij 85% Crit Rate</span>
+    </div>
+    <div class="meters" id="meters"></div>
+    <ul class="fixes" id="fixes"></ul>
+  </section>
+
+  <section aria-labelledby="h-dng" id="dungeons-sec">
+    <div class="sec-head">
+      <h2 id="h-dng">Teams per spelonderdeel</h2>
+      <span class="muted">Teams uit je eigen roster. Levels en ranks lezen live mee na elke sync.</span>
+    </div>
+    <div class="dgroups" id="dtabs" aria-label="Kies een spelonderdeel"></div>
+    <div id="dpanel" class="dpanel"><div class="empty">De dungeon-teams verschijnen hier zodra de gegevens geladen zijn.</div></div>
+  </section>
+
+  <section aria-labelledby="h-core">
+    <h2 id="h-core">Kerncampions</h2>
+    <div class="cores" id="cores"></div>
+  </section>
+
+  <section aria-labelledby="h-roster">
+    <div class="sec-head">
+      <h2 id="h-roster">Volledig roster</h2>
+      <span class="num muted" id="roster-count"></span>
+    </div>
+    <div class="filters">
+      <div class="seg" role="group" aria-label="Filter op rol" id="role-filter">
+        <button type="button" data-v="alle" aria-pressed="true">Alle</button>
+        <button type="button" data-v="kern" aria-pressed="false">Kern</button>
+        <button type="button" data-v="bewaren" aria-pressed="false">Bewaren</button>
+        <button type="button" data-v="food" aria-pressed="false">Food</button>
+      </div>
+      <input id="search" type="search" placeholder="Zoek champion of factie" aria-label="Zoek champion of factie">
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr>
+          <th data-k="name">Champion</th><th data-k="rarity">Zeldzaamheid</th><th data-k="grade">Rank</th><th data-k="level">Lvl</th><th data-k="faction">Factie</th><th data-k="role">Rol</th><th>Notitie</th>
+        </tr></thead>
+        <tbody id="roster"><tr><td colspan="7" class="empty">Het roster verschijnt hier na de sync.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-rules">
+    <h2 id="h-rules">Vaste regels</h2>
+    <div class="rules" id="rules"></div>
+  </section>
+
+  <footer>
+    <span>Bron accountdata: HellHades Optimizer. Rollen gecontroleerd tegen <a href="https://hellhades.com/raid/champions/" target="_blank" rel="noopener">HellHades champion-pagina's</a>.</span>
+    <span>Claude werkt <code>data.json</code> bij na elke sync. Je vinkjes worden in deze browser bewaard.</span>
+  </footer>
+</div>
+
+<script>
+const RARITY = {1:["Common","--r-common"],2:["Uncommon","--r-uncommon"],3:["Rare","--r-rare"],4:["Epic","--r-epic"],5:["Legendary","--r-legendary"]};
+const ROLE_ORDER = {kern:0,bewaren:1,food:2};
+const state = {meta:null, tasks:[], champs:[], role:"alle", q:"", sortK:"role", sortDir:1, writable:true};
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const stars = n => "★".repeat(n||0);
+
+function setStatus(t, err){ const s=$("status"); s.textContent=t; s.className="status"+(err?" err":""); }
+
+function renderMeta(){
+  const m = state.meta; if(!m) return;
+  $("acc-name").textContent = m.name || "Swypax";
+  $("synced").textContent = m.synced || "–";
+  $("arena").textContent = m.arena ?? "–";
+  const camp = m.campaign || {};
+  $("camp").innerHTML = [["Normal",camp.normal],["Hard",camp.hard],["Brutal",camp.brutal],["Nightmare",camp.nightmare]].map(([l,v])=>{
+    v = v||0; const pct = Math.min(100, v/252*100);
+    return `<div><span class="lbl">${l}</span><span class="num">${v} / 252 ★</span><span class="bar"><i style="width:${pct}%"></i></span></div>`;
+  }).join("");
+  $("mission-title").textContent = m.missionTitle || "–";
+  $("report").textContent = m.report ? "Rapporteer terug met: " + m.report : "";
+  const k = m.kael || {};
+  const meters = [
+    ["Crit Rate", k.cr, 85, "%"],
+    ["Speed", k.spd, 170, ""],
+    ["Accuracy", k.acc, null, ""],
+    ["Crit Damage", k.cd, null, "%"],
+    ["ATK", k.atk, null, ""]
+  ];
+  $("meters").innerHTML = meters.map(([l,v,t,u])=>{
+    if(v==null) return "";
+    if(t==null) return `<div class="meter"><div class="row"><span class="eyebrow">${l}</span></div><div class="row"><span class="val num">${Number(v).toLocaleString("nl-BE")}${u}</span><span class="tgt">geen vast doel</span></div></div>`;
+    const pct = Math.min(100, v/t*100); const cls = pct<50?"low":pct<85?"mid":"ok";
+    return `<div class="meter ${cls}"><div class="row"><span class="eyebrow">${l}</span></div><div class="row"><span class="val num">${v}${u}</span><span class="tgt num">doel ${t}${u}</span></div><span class="bar"><i style="width:${pct}%"></i></span></div>`;
+  }).join("");
+  $("fixes").innerHTML = (m.gearFixes||[]).map(f=>`<li>${esc(f)}</li>`).join("");
+  $("rules").innerHTML = (m.rules||[]).map(r=>`<div><div class="eyebrow">${esc(r.t)}</div><div>${esc(r.d)}</div></div>`).join("");
+}
+
+function renderTasks(){
+  const ul = $("tasks");
+  if(!state.tasks.length){ ul.innerHTML = `<li class="empty">Nog geen taken voor deze opdracht.</li>`; $("task-progress").textContent=""; return; }
+  const done = state.tasks.filter(t=>t.done).length;
+  $("task-progress").textContent = `${done} / ${state.tasks.length} afgevinkt`;
+  ul.innerHTML = state.tasks.map(t=>`<li><label class="${t.done?"done":""}"><input type="checkbox" id="task-${esc(t.id)}" data-id="${esc(t.id)}" ${t.done?"checked":""} ${state.writable?"":"disabled"}><span>${esc(t.text)}</span></label></li>`).join("");
+}
+
+function renderCores(){
+  const cores = state.champs.filter(c=>c.role==="kern").sort((a,b)=>(a.prio||9)-(b.prio||9));
+  $("cores").innerHTML = cores.map(c=>{
+    const [rn, rv] = RARITY[c.rarity]||["?","--r-common"];
+    return `<article class="core" style="--rc:var(${rv})">
+      <div class="top"><h3>${esc(c.name)}</h3><span class="prio">prio ${esc(c.prio)}</span></div>
+      <div><span class="stars">${stars(c.grade)}</span> <span class="num">Lvl ${c.level}</span></div>
+      <div class="tags"><span class="tag">${rn}</span><span class="tag">${esc(c.faction)}</span><span class="tag">${esc(c.affinity)}</span></div>
+      <div>${esc(c.detail||c.note)}</div>
+      ${c.next?`<div class="note"><b>Volgende stap:</b> ${esc(c.next)}</div>`:""}
+    </article>`;
+  }).join("") || `<div class="empty">Kerncampions verschijnen na de sync.</div>`;
+}
+
+function renderRoster(){
+  let rows = state.champs.slice();
+  if(state.role!=="alle") rows = rows.filter(c=>c.role===state.role);
+  const q = state.q.trim().toLowerCase();
+  if(q) rows = rows.filter(c=>(c.name+" "+c.faction).toLowerCase().includes(q));
+  const k = state.sortK, d = state.sortDir;
+  rows.sort((a,b)=>{
+    let x = k==="role"?ROLE_ORDER[a.role]:a[k], y = k==="role"?ROLE_ORDER[b.role]:b[k];
+    if(typeof x==="string") return x.localeCompare(y)*d;
+    if(x!==y) return (x-y)*d;
+    return (b.grade-a.grade)||(b.level-a.level)||a.name.localeCompare(b.name);
+  });
+  $("roster-count").textContent = `${rows.length} van ${state.champs.length}`;
+  $("roster").innerHTML = rows.map(c=>{
+    const [rn, rv] = RARITY[c.rarity]||["?","--r-common"];
+    return `<tr><td><b>${esc(c.name)}</b></td><td><span class="rdot" style="--rc:var(${rv})"></span>${rn}</td><td class="stars">${stars(c.grade)}</td><td class="num">${c.level}</td><td>${esc(c.faction)}</td><td><span class="role ${c.role}">${c.role}</span></td><td class="note">${esc(c.note||"")}</td></tr>`;
+  }).join("") || `<tr><td colspan="7" class="empty">Geen champions voor deze filter.</td></tr>`;
+}
+
+const STATUS = {farm:["Farmbaar","st-farm"], proberen:["Nu proberen","st-proberen"], later:["Later","st-later"], niet:["Nog niet","st-niet"]};
+state.dungeons = []; state.dsel = null;
+try{ state.dsel = localStorage.getItem("rsl-dsel"); }catch(e){}
+
+function renderDungeons(){
+  const tabs = $("dtabs"), panel = $("dpanel");
+  const ds = state.dungeons;
+  if(!ds.length){ tabs.innerHTML=""; panel.innerHTML=`<div class="empty">Nog geen dungeon-teams opgeslagen.</div>`; return; }
+  if(!ds.some(d=>d.id===state.dsel)) state.dsel = ds[0].id;
+  const GROUPS = ["Dungeons","Clan bosses","Overig"];
+  const groups = [...GROUPS, ...new Set(ds.map(d=>d.group||"Dungeons").filter(g=>!GROUPS.includes(g)))];
+  tabs.innerHTML = groups.map(g=>{
+    const items = ds.filter(d=>(d.group||"Dungeons")===g);
+    if(!items.length) return "";
+    return `<div class="dgroup"><span class="eyebrow">${esc(g)}</span><div class="dtabs" role="tablist" aria-label="${esc(g)}">${items.map(d=>{
+      const [, sc] = STATUS[d.status]||STATUS.later;
+      return `<button type="button" role="tab" class="dtab ${sc}" id="dtab-${esc(d.id)}" data-id="${esc(d.id)}" aria-selected="${d.id===state.dsel}"><span class="sdot"></span>${esc(d.short||d.name)}</button>`;
+    }).join("")}</div></div>`;
+  }).join("");
+  const d = ds.find(x=>x.id===state.dsel);
+  const [sl, sc] = STATUS[d.status]||STATUS.later;
+  const byId = Object.fromEntries(state.champs.map(c=>[c.id,c]));
+  const team = (d.team||[]).map((t,i)=>{
+    const c = byId[t.cid];
+    let ready;
+    if(!c) ready = `<span class="ready r-miss">niet in roster</span>`;
+    else if(c.level>=50) ready = `<span class="ready r-ok">klaar</span>`;
+    else ready = `<span class="ready r-low">L${c.level}: eerst levelen</span>`;
+    const label = c ? `${esc(c.name)} <span class="stars" style="font-size:.8rem">${stars(c.grade)}</span>` : esc(t.name||t.cid);
+    return `<div class="slot"><span class="n">${i+1}</span><div class="who"><b>${label}</b><span>${esc(t.role)}</span></div>${ready}</div>`;
+  }).join("");
+  const list = arr => (arr||[]).map(x=>`<li>${esc(x)}</li>`).join("");
+  panel.innerHTML = `
+    <div class="dhead"><div><h3>${esc(d.name)}</h3><div class="muted">${esc(d.purpose||"")}</div></div><span class="spill ${sc}"><span class="sdot"></span>${sl}</span></div>
+    <div class="dgrid">
+      <div><div class="eyebrow">Beste team nu</div><div class="team">${team}</div></div>
+      <div><div class="eyebrow">Mechaniek</div><ul>${list(d.mechanics)}</ul><div class="eyebrow" style="margin-top:8px">Wat je team nodig heeft</div><ul>${list(d.needs)}</ul>${d.targets&&d.targets.length?`<div class="eyebrow" style="margin-top:8px">Stat-doelen</div><ul class="num" style="font-size:.88rem">${list(d.targets)}</ul>`:""}</div>
+    </div>
+    ${d.note?`<div class="dnote"><b>Advies:</b> ${esc(d.note)}</div>`:""}`;
+}
+$("dtabs").addEventListener("click", e=>{
+  const b = e.target.closest(".dtab"); if(!b) return;
+  state.dsel = b.dataset.id; try{ localStorage.setItem("rsl-dsel", state.dsel); }catch(err){}
+  renderDungeons();
+});
+
+$("role-filter").addEventListener("click", e=>{
+  const b = e.target.closest("button"); if(!b) return;
+  state.role = b.dataset.v;
+  document.querySelectorAll("#role-filter button").forEach(x=>x.setAttribute("aria-pressed", x===b?"true":"false"));
+  renderRoster();
+});
+$("search").addEventListener("input", e=>{ state.q = e.target.value; renderRoster(); });
+document.querySelectorAll("th[data-k]").forEach(th=>th.addEventListener("click",()=>{
+  const k = th.dataset.k; state.sortDir = state.sortK===k ? -state.sortDir : (k==="grade"||k==="level"||k==="rarity"?-1:1); state.sortK = k; renderRoster();
+}));
+
+const DONE_KEY = "rsl-done";
+function localDone(){ try{ return JSON.parse(localStorage.getItem(DONE_KEY)||"{}"); }catch(e){ return {}; } }
+function saveDone(m){ try{ localStorage.setItem(DONE_KEY, JSON.stringify(m)); }catch(e){} }
+(async ()=>{
+  let data;
+  try{
+    const r = await fetch("data.json", {cache:"no-cache"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    data = await r.json();
+  }catch(e){ setStatus("Kan data.json niet laden ("+e.message+"). Open de site via de webserver, niet als los bestand.", true); return; }
+  const ld = localDone();
+  state.meta = data.meta || null;
+  state.tasks = (data.tasks||[]).map(t=>({...t, done: t.id in ld ? ld[t.id] : !!t.done}));
+  state.champs = data.champions || [];
+  state.dungeons = data.content || [];
+  $("count").textContent = state.champs.length;
+  setStatus("");
+  renderMeta(); renderTasks(); renderCores(); renderRoster(); renderDungeons();
+  $("tasks").addEventListener("change", e=>{
+    const cb = e.target; if(!cb.dataset.id) return;
+    const m = localDone(); m[cb.dataset.id] = cb.checked; saveDone(m);
+    const t = state.tasks.find(x=>x.id===cb.dataset.id); if(t) t.done = cb.checked;
+    renderTasks();
+  });
+})();
+</script>
+</body>
+</html>
