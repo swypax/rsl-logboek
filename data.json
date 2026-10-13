@@ -3,28 +3,18 @@
   "arena": 4,
   "campaign": {
    "brutal": 0,
-   "hard": 87,
+   "hard": 88,
    "nightmare": 0,
    "normal": 252
   },
   "gearFixes": [
-   "Gloves zijn Crit Damage (42%), niet Crit Rate. Er staan geen Crit Rate-gloves op het account: gebruik de eerste goede die dropt, ook een Epic.",
-   "Chest is volgens de export van 13 okt nog HP% (19%, Set #1). De 6★ ATK%-chest van Skullsworn zit in het optimizer-voorstel. Controleer of taak 1 echt in het spel gebeurd is.",
-   "De export toont geen Speed-boots op Kael. De ongebruikte 4★ Speed-boots liggen nog in de kluis (Set #13). Controleer taak 2 in het spel.",
-   "Laat 'Find Builds' in de HH Optimizer draaien: 69 stukken liggen ongebruikt."
+   "Optimizer-build staat op Kael: SPD 183, ACC 137, C.RATE 44%. 4 stukken Perception (Set #38).",
+   "Nog steeds geen Crit Rate-gloves op het account: Crit Rate blijft op 44%, doel 85%.",
+   "Crit Damage zakte naar 78%. Voor poison maakt dat weinig uit, voor directe schade wel.",
+   "Dorothy draagt nu minder goede gear. Geef haar die stukken terug zodra ze L50 is."
   ],
   "kael": {
    "current": {
-    "HP": 21591,
-    "ATK": 1352,
-    "DEF": 1257,
-    "SPD": 107,
-    "CRATE": 29,
-    "CDMG": 149,
-    "RES": 71,
-    "ACC": 15
-   },
-   "proposed": {
     "HP": 15289,
     "ATK": 1486,
     "DEF": 1309,
@@ -34,7 +24,8 @@
     "RES": 46,
     "ACC": 137
    },
-   "proposedNote": "Optimizer-voorstel, nog niet geëquipt. Neemt wapen, gloves (+16) en 6★ Speed-boots van Dorothy, plus de 6★ ATK%-chest van Skullsworn.",
+   "proposed": null,
+   "proposedNote": "Optimizer-build geëquipt op 13 okt. Totalen = de optimizer-preview van die build (dezelfde stukken), niet opnieuw uitgelezen.",
    "targets": [
     {
      "stat": "CRATE",
@@ -94,7 +85,7 @@
     "t": "Gear"
    }
   ],
-  "synced": "13 okt 2026",
+  "synced": "13 okt 2026, 15:30",
   "account": {
    "clan": "C1C-NOVUS",
    "createdOn": "2026-10-01",
@@ -142,7 +133,7 @@
    "id": "t03"
   },
   {
-   "done": false,
+   "done": true,
    "order": 4,
    "text": "Laat 'Find Builds' voor Kael draaien in de HH Optimizer (Crit Rate eerst, Speed tweede).",
    "id": "t04"
@@ -154,7 +145,7 @@
    "id": "t05"
   },
   {
-   "done": false,
+   "done": true,
    "order": 6,
    "text": "Breng twee 4★-champions naar 5★ (Berserker L34, Warmaiden L13, Berserker of Outlander). Per stuk: 4 food van 4★.",
    "id": "t06"
@@ -162,7 +153,7 @@
   {
    "done": false,
    "order": 7,
-   "text": "Kael naar 6★: offer Hound Spawn, Siegebreaker, Warmaiden (5★) en de twee nieuwe 5★'s.",
+   "text": "Kael naar 6★: offer Hound Spawn, Siegebreaker, beide Warmaidens (5★) en Berserker (5★). Alle vijf liggen klaar.",
    "id": "t07"
   },
   {
@@ -255,53 +246,52 @@
     "gearAsReported": [
      {
       "slot": "Wapen",
-      "set": 9,
-      "stars": 5,
+      "set": 24,
+      "stars": 4,
       "lvl": 12,
       "main": "ATK"
      },
      {
       "slot": "Helm",
-      "set": 9,
+      "set": 38,
       "stars": 5,
       "lvl": 12,
       "main": "HP"
      },
      {
       "slot": "Schild",
-      "set": 9,
-      "stars": 5,
+      "set": 33,
+      "stars": 4,
       "lvl": 12,
       "main": "DEF"
      },
      {
       "slot": "Gloves",
-      "set": 9,
-      "stars": 5,
-      "lvl": 12,
-      "main": "C.DMG 42%"
+      "set": 38,
+      "stars": 6,
+      "lvl": 16,
+      "main": "DEF (zoals gerapporteerd)"
      },
      {
       "slot": "Chest",
-      "set": 1,
-      "stars": 3,
+      "set": 38,
+      "stars": 6,
       "lvl": 12,
-      "main": "HP% 19%",
-      "note": "Epic"
+      "main": "ATK 39%"
      },
      {
       "slot": "Boots",
-      "set": 9,
-      "stars": 5,
+      "set": 38,
+      "stars": 6,
       "lvl": 12,
-      "main": "niet betrouwbaar gerapporteerd"
+      "main": "SPD 29"
      },
      {
       "slot": "Ring",
       "set": null,
       "stars": 3,
       "lvl": 8,
-      "main": "niet gerapporteerd"
+      "main": "DEF"
      }
     ],
     "ascendNext": {
@@ -329,7 +319,7 @@
       "ay-kael"
      ]
     },
-    "next": "Rank 6 via vijf 5★-food (Hound Spawn, Siegebreaker en Warmaiden 5★ zijn klaar; nog twee nodig). Daarna Crit Rate-gloves en de optimizer-build.",
+    "next": "Rank 6: je hebt nu vijf 5★-food (Hound Spawn, Siegebreaker, 2× Warmaiden, Berserker). Offer ze in de Tavern. Daarna Crit Rate-gloves zoeken.",
     "nextSrc": [
      "hh-chicken"
     ]
@@ -715,17 +705,6 @@
    "id": "c06"
   },
   {
-   "affinity": "Spirit",
-   "faction": "Dark Elves",
-   "grade": 2,
-   "level": 1,
-   "name": "Magekiller",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c07"
-  },
-  {
    "affinity": "Force",
    "faction": "Barbarians",
    "grade": 3,
@@ -735,28 +714,6 @@
    "rarity": 3,
    "role": "food",
    "id": "c08"
-  },
-  {
-   "affinity": "Force",
-   "faction": "Barbarians",
-   "grade": 3,
-   "level": 1,
-   "name": "Warmaiden",
-   "note": "",
-   "rarity": 3,
-   "role": "food",
-   "id": "c09"
-  },
-  {
-   "affinity": "Force",
-   "faction": "Dark Elves",
-   "grade": 2,
-   "level": 1,
-   "name": "Ranger",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c10"
   },
   {
    "affinity": "Spirit",
@@ -772,19 +729,8 @@
   {
    "affinity": "Spirit",
    "faction": "Barbarians",
-   "grade": 4,
-   "level": 1,
-   "name": "Outlander",
-   "note": "Kandidaat om naar 5★ te brengen.",
-   "rarity": 2,
-   "role": "food",
-   "id": "c12"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
    "grade": 3,
-   "level": 1,
+   "level": 3,
    "name": "Soulbond Bowyer",
    "note": "AoE A1 (extra critkans). A3 met Turn Meter-leegmaken volgens Ayumilove/HellHades, niet zichtbaar in de speltekst. In opslag.",
    "rarity": 3,
@@ -893,17 +839,6 @@
    }
   },
   {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 1,
-   "level": 10,
-   "name": "Bully",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c14"
-  },
-  {
    "affinity": "Force",
    "faction": "Barbarians",
    "grade": 5,
@@ -915,166 +850,45 @@
    "id": "c15"
   },
   {
-   "affinity": "Spirit",
-   "faction": "Undead Hordes",
-   "grade": 2,
-   "level": 1,
-   "name": "Dhampir",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c16"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 2,
-   "level": 1,
-   "name": "Outrider",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c17"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Undead Hordes",
-   "grade": 1,
-   "level": 1,
-   "name": "Hellhound",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c18"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Sacred Order",
-   "grade": 2,
-   "level": 1,
-   "name": "Knecht",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c19"
-  },
-  {
    "affinity": "Magic",
    "faction": "Sacred Order",
-   "grade": 2,
+   "grade": 1,
    "level": 1,
    "name": "Yeoman",
-   "note": "",
+   "note": "Common. A1 raakt 3 keer: bruikbaar als schild-breker in Fire Knight, verder food.",
    "rarity": 1,
    "role": "food",
    "id": "c20"
   },
   {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 2,
-   "level": 1,
-   "name": "Outlander",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c21"
-  },
-  {
-   "affinity": "Magic",
-   "faction": "Undead Hordes",
-   "grade": 2,
-   "level": 1,
-   "name": "Deathknight",
-   "note": "Niet de Legendary Ultimate Deathknight.",
-   "rarity": 1,
-   "role": "food",
-   "id": "c22"
-  },
-  {
    "affinity": "Force",
    "faction": "Barbarians",
-   "grade": 4,
-   "level": 13,
+   "grade": 5,
+   "level": 1,
    "name": "Warmaiden",
-   "note": "Kandidaat om naar 5★ te brengen. A3: 30% AoE Decrease DEF (75% kans).",
+   "note": "5★-food, klaar voor Kael 6★. (net naar 5★ gebracht)",
    "rarity": 3,
    "role": "food",
    "id": "c23"
   },
   {
-   "affinity": "Magic",
-   "faction": "Knights Revenant",
-   "grade": 2,
-   "level": 1,
-   "name": "Glenspear",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c24"
-  },
-  {
-   "affinity": "Force",
-   "faction": "Barbarians",
-   "grade": 3,
-   "level": 1,
-   "name": "Warmaiden",
-   "note": "",
-   "rarity": 3,
-   "role": "food",
-   "id": "c25"
-  },
-  {
-   "affinity": "Magic",
-   "faction": "Ogryn Tribes",
-   "grade": 2,
-   "level": 1,
-   "name": "Frostskin",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c26"
-  },
-  {
    "affinity": "Spirit",
    "faction": "Barbarians",
-   "grade": 3,
-   "level": 30,
-   "name": "Shieldguard",
-   "note": "A1: 30% kans op 15% Decrease SPD. A2: AoE, schade schaalt met DEF.",
-   "rarity": 2,
-   "role": "food",
-   "id": "c27"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 4,
-   "level": 34,
+   "grade": 5,
+   "level": 1,
    "name": "Berserker",
-   "note": "Kandidaat om naar 5★ te brengen.",
+   "note": "5★-food, klaar voor Kael 6★. (net naar 5★ gebracht)",
    "rarity": 3,
    "role": "food",
    "id": "c28"
   },
   {
    "affinity": "Spirit",
-   "faction": "Sacred Order",
-   "grade": 2,
-   "level": 1,
-   "name": "Knecht",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c29"
-  },
-  {
-   "affinity": "Spirit",
    "faction": "Barbarians",
    "grade": 3,
    "level": 1,
    "name": "Shieldguard",
-   "note": "",
+   "note": "Food. Enige Shieldguard die over is.",
    "rarity": 2,
    "role": "food",
    "id": "c30"
@@ -1092,153 +906,10 @@
   },
   {
    "affinity": "Spirit",
-   "faction": "Dark Elves",
-   "grade": 2,
-   "level": 1,
-   "name": "Magekiller",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c32"
-  },
-  {
-   "affinity": "Magic",
-   "faction": "Orcs",
-   "grade": 2,
-   "level": 1,
-   "name": "Suntribe",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c33"
-  },
-  {
-   "affinity": "Magic",
-   "faction": "Banner Lords",
-   "grade": 2,
-   "level": 1,
-   "name": "Swordsman",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c34"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 2,
-   "level": 1,
-   "name": "Bully",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c35"
-  },
-  {
-   "affinity": "Force",
-   "faction": "Banner Lords",
-   "grade": 2,
-   "level": 1,
-   "name": "Axeman",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c36"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 2,
-   "level": 1,
-   "name": "Shieldguard",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c37"
-  },
-  {
-   "affinity": "Magic",
-   "faction": "Banner Lords",
-   "grade": 2,
-   "level": 1,
-   "name": "Swordsman",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c38"
-  },
-  {
-   "affinity": "Force",
-   "faction": "Banner Lords",
-   "grade": 2,
-   "level": 1,
-   "name": "Axeman",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c39"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Sacred Order",
-   "grade": 2,
-   "level": 1,
-   "name": "Novitiate",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c40"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Barbarians",
-   "grade": 4,
-   "level": 1,
-   "name": "Berserker",
-   "note": "Kandidaat om naar 5★ te brengen.",
-   "rarity": 3,
-   "role": "food",
-   "id": "c41"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Sacred Order",
-   "grade": 2,
-   "level": 1,
-   "name": "Armiger",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c42"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Skinwalkers",
-   "grade": 2,
-   "level": 1,
-   "name": "Satyr",
-   "note": "",
-   "rarity": 2,
-   "role": "food",
-   "id": "c43"
-  },
-  {
-   "affinity": "Spirit",
-   "faction": "Sacred Order",
-   "grade": 1,
-   "level": 1,
-   "name": "Knecht",
-   "note": "",
-   "rarity": 1,
-   "role": "food",
-   "id": "c44"
-  },
-  {
-   "affinity": "Spirit",
    "detail": "Gratis loyalty-Legendary. A1 zet Weaken (25%), A2 zet 60% Decrease DEF en 50% Decrease ACC op alle vijanden, A3 steelt buffs en kan stunnen. Haar aura geeft 19% SPD in alle gevechten. Ze draagt 6★ Speed-boots.",
    "faction": "Banner Lords",
    "grade": 5,
-   "level": 9,
+   "level": 10,
    "name": "Dorothy Gale",
    "next": "Naar L50 in de campagne. Daarna Legendary tomes op A2 en 6★ na Kael.",
    "note": "Support: Weaken (A1), Decrease DEF + ACC (A2), 19% SPD-aura.",
@@ -1331,49 +1002,11 @@
     ],
     "gearAsReported": [
      {
-      "slot": "Wapen",
-      "set": 24,
-      "stars": 4,
+      "slot": "Let op",
+      "set": null,
+      "stars": null,
       "lvl": null,
-      "main": "ATK",
-      "note": "substat SPD 10"
-     },
-     {
-      "slot": "Helm",
-      "set": 9,
-      "stars": 5,
-      "lvl": 0,
-      "main": "HP"
-     },
-     {
-      "slot": "Schild",
-      "set": 38,
-      "stars": 6,
-      "lvl": 16,
-      "main": "DEF",
-      "note": "Legendary"
-     },
-     {
-      "slot": "Gloves",
-      "set": 38,
-      "stars": 6,
-      "lvl": 16,
-      "main": "niet gerapporteerd"
-     },
-     {
-      "slot": "Chest",
-      "set": 30,
-      "stars": 4,
-      "lvl": 0,
-      "main": "niet gerapporteerd"
-     },
-     {
-      "slot": "Boots",
-      "set": 38,
-      "stars": 6,
-      "lvl": 12,
-      "main": "SPD 29",
-      "note": "Legendary"
+      "main": "Wapen, gloves en Speed-boots zijn op 13 okt naar Kael verplaatst. Haar huidige gear is na de sync niet opnieuw uitgelezen."
      }
     ],
     "ascendNext": {
@@ -1408,26 +1041,235 @@
    }
   },
   {
+   "id": "h366",
+   "name": "Death Hound",
+   "rarity": 1,
+   "faction": "Undead Hordes",
    "affinity": "Magic",
-   "faction": "Orcs",
    "grade": 1,
    "level": 1,
-   "name": "Warboy",
-   "note": "",
-   "rarity": 1,
    "role": "food",
-   "id": "c46"
+   "note": ""
   },
   {
+   "id": "h376",
+   "name": "Sister Militant",
+   "rarity": 1,
+   "faction": "Sacred Order",
    "affinity": "Force",
-   "faction": "Barbarians",
-   "grade": 2,
+   "grade": 1,
    "level": 1,
-   "name": "Spiritwalker",
-   "note": "",
-   "rarity": 2,
    "role": "food",
-   "id": "c47"
+   "note": ""
+  },
+  {
+   "id": "h378",
+   "name": "Sister Militant",
+   "rarity": 1,
+   "faction": "Sacred Order",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h380",
+   "name": "Sister Militant",
+   "rarity": 1,
+   "faction": "Sacred Order",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h384",
+   "name": "Ranger",
+   "rarity": 1,
+   "faction": "Dark Elves",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h385",
+   "name": "Preacher",
+   "rarity": 1,
+   "faction": "Sacred Order",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h386",
+   "name": "Death Hound",
+   "rarity": 1,
+   "faction": "Undead Hordes",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h388",
+   "name": "Bully",
+   "rarity": 1,
+   "faction": "Barbarians",
+   "affinity": "Spirit",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h392",
+   "name": "Sister Militant",
+   "rarity": 1,
+   "faction": "Sacred Order",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h393",
+   "name": "Bully",
+   "rarity": 1,
+   "faction": "Barbarians",
+   "affinity": "Spirit",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h395",
+   "name": "Lurker",
+   "rarity": 1,
+   "faction": "Dark Elves",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h396",
+   "name": "Warboy",
+   "rarity": 1,
+   "faction": "Orcs",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h400",
+   "name": "Deathknight",
+   "rarity": 1,
+   "faction": "Undead Hordes",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h401",
+   "name": "Death Hound",
+   "rarity": 1,
+   "faction": "Undead Hordes",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h405",
+   "name": "Warboy",
+   "rarity": 1,
+   "faction": "Orcs",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h407",
+   "name": "Pikeman",
+   "rarity": 1,
+   "faction": "Banner Lords",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h408",
+   "name": "Pikeman",
+   "rarity": 1,
+   "faction": "Banner Lords",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h409",
+   "name": "Preacher",
+   "rarity": 1,
+   "faction": "Sacred Order",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h410",
+   "name": "Ranger",
+   "rarity": 1,
+   "faction": "Dark Elves",
+   "affinity": "Force",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h413",
+   "name": "Pikeman",
+   "rarity": 1,
+   "faction": "Banner Lords",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
+  },
+  {
+   "id": "h415",
+   "name": "Thrall",
+   "rarity": 1,
+   "faction": "Knights Revenant",
+   "affinity": "Magic",
+   "grade": 1,
+   "level": 1,
+   "role": "food",
+   "note": ""
   }
  ],
  "content": [
@@ -2090,8 +1932,8 @@
      "role": "Schade"
     },
     {
-     "cid": "c27",
-     "role": "A1: kans op 15% Decrease SPD. A2: AoE die met DEF schaalt"
+     "cid": "c30",
+     "role": "A1: kans op 15% Decrease SPD. A2: AoE die met DEF schaalt (de Shieldguard op L30 is opgeofferd; deze is L1)"
     },
     {
      "cid": "c15",
